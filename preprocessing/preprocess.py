@@ -1,7 +1,7 @@
 import json
 import re
 
-INFILE = "C:\\Users\\ce\\Documents\\GitHub\\text-mining\\lyric-crawler\\lyrics_djent.txt"
+INFILE = "../lyric-crawler/lyrics_djent.txt"
 OUTFILE = "lyrics.json"
 
 """
