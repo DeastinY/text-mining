@@ -1,3 +1,0 @@
-pylyrics3
-requests
-beautifulsoup4
