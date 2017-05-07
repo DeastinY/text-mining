@@ -45,7 +45,7 @@ def get_lyrics(band):
 if __name__ == '__main__':
     with open('lyrics.json', 'w') as fout:
         all_lyrics = []
-        for t in get_top():
+        for t in get_top_djent(300):
             print("Extracting {}".format(t))
             lyrics = get_lyrics(t)
             if lyrics and len(lyrics) > 0:
