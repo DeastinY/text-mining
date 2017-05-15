@@ -6,7 +6,7 @@ OUTFILE = "lyrics.json"
 
 """
 {
-    interpret: "",
+    artist: "",
     title: "",
     text_raw: "",
     text_tokenized: []
@@ -23,17 +23,17 @@ with open(INFILE, "r") as inf:
                 continue
 
             if line.startswith("$$$$"):
-                # new interpret
-                print("New interpret: " + line)
-                current_interpret = line.replace("$$$$$$$$$$", "").strip()
-                current_song["interpret"] = current_interpret
+                # new artist
+                print("New artist: " + line)
+                current_artist = line.replace("$$$$$$$$$$", "").strip()
+                current_song["artist"] = current_artist
             elif line.startswith("####"):
                 # new title
                 print("New title: " + line)
                 if "text_raw" in current_song.keys():
                     results.append(current_song)
                     current_song = dict()
-                    current_song["interpret"] = current_interpret
+                    current_song["artist"] = current_artist
                 current_song["title"] = line.replace("###########", "").strip()
                 current_song["text_raw"] = ""
             else:

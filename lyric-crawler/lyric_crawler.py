@@ -53,7 +53,7 @@ if __name__ == '__main__':
                 for song, lyrics in lyrics.items():
                     all_lyrics.append({
                         "text_raw": lyrics,
-                        "interpret": band,
+                        "artist": band,
                         "title": song
                     })
         json.dump(all_lyrics, fout)
