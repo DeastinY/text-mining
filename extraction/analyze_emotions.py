@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import json
 import csv
 import nltk
@@ -6,15 +7,15 @@ import numpy as np
 categories = ["anger", "anticipation", "disgust", "fear",
 "joy", "sadness", "surprise", "trust"]
 
-INFILE = "lyrics_statistics.json"
-OUTFILE = "lyrics_with_emotions.json"
+INFILE = "../lyric-crawler/lyrics.json"
+OUTFILE = "output/lyrics_emotions.json"
 EMOLEXFILE = "EmoLex.csv"
 
 emolex = dict()
 with open(EMOLEXFILE, "r") as ef:
 	reader = csv.reader(ef, delimiter=";")
 
-	header_row = reader.next()
+	header_row = next(reader)
 
 	for row in reader:
 		emolex[row[0].lower().strip()] = np.array(row[4:], dtype=int)
@@ -30,6 +31,6 @@ with open(INFILE, "r") as inf:
 					word = token.lower().strip()
 					if word in emolex:
 						emotion_vector += emolex[word]
-			song["emotions"] = list(emotion_vector)
+			song["emotions"] = emotion_vector.tolist()
 			print("Processed song {}".format(idx))
 		json.dump(songs, outf, indent=2)

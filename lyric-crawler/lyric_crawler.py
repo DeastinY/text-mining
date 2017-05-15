@@ -1,11 +1,12 @@
 import json
 import requests
 import pylyrics3
+import os
 
 from bs4 import BeautifulSoup
 
-def get_top():
-    """Grabs the top 100 billboard artist"""
+def get_top_billboard_artists():
+    """Grabs the top 100 billboard artists"""
     RANKING_URL = "http://www.billboard.com/charts/artist-100"
     data = requests.get(RANKING_URL)
     soup = BeautifulSoup(data.text, "lxml")
@@ -15,7 +16,7 @@ def get_top():
             names.append(row.text)
     return names
 
-def get_top_djent(num):
+def get_top_djent_artists(num):
     """Grabs the top num Djent bands by popularity from got-djent.com"""
     RANKING_URL = "http://got-djent.com/bands/ranking?page="
     def get_top_rec(page):
@@ -38,22 +39,40 @@ def get_top_djent(num):
         names.extend(get_top_rec(i))
     return names[0:num]
 
-def get_lyrics(band):
-    """Get the lyrics for all songs of a band."""
-    return pylyrics3.get_artist_lyrics(band)
+def get_songs(artist):
+    result = []
+    print("Extracting {}".format(artist))
+    songs = pylyrics3.get_artist_lyrics(artist)
+    if songs and len(songs) > 0:
+        for song, lyrics in songs.items():
+            result.append({
+                "text_raw": lyrics,
+                "artist": artist,
+                "title": song
+            })
+    return result
 
 if __name__ == '__main__':
-    with open('lyrics.json', 'w') as fout:
-        all_lyrics = []
-        for t in get_top_djent(300):
-            print("Extracting {}".format(t))
-            lyrics = get_lyrics(t)
-            if lyrics and len(lyrics) > 0:
-                band = t
-                for song, lyrics in lyrics.items():
-                    all_lyrics.append({
-                        "text_raw": lyrics,
-                        "artist": band,
-                        "title": song
-                    })
-        json.dump(all_lyrics, fout)
+    OUTFILE = "lyrics.json"
+    with open(OUTFILE, "a") as fout:
+        try:
+            result = json.load(fout)
+        except:
+            result = []
+
+        existing_artists = set([song["artist"] for song in result])
+        for idx, artist in enumerate(get_top_billboard_artists()):
+            if artist in existing_artists:
+                print("Skipping {}".format(artist))
+                continue
+
+            result += get_songs(artist)
+
+        for idx, artist in enumerate(get_top_djent_artists(50)):
+            if artist in existing_artists:
+                print("Skipping {}".format(artist))
+                continue
+
+            result += get_songs(artist)
+
+        json.dump(result, fout, indent=2)
