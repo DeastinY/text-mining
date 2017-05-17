@@ -2,7 +2,6 @@ from deco import concurrent, synchronized
 from json import loads, dumps
 from tqdm import tqdm
 from pathlib import Path
-from pathos.multiprocessing import ProcessingPool
 import numpy as np
 import logging
 import nltk
