@@ -12,6 +12,7 @@ FILE_POP = Path("pop.json")
 FILE_DB = Path("db.json")
 FILE_DJENT = Path("djent.json")
 FILE_EMOLEX = Path("EmoLex.cs")
+FILE_STOPWORDS = Path("stopwords.json")
 DIR_OUTPUT = Path("output")
 EMOTION_CATEGORIES = ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"]
 POOL = ProcessingPool(4)
@@ -74,17 +75,17 @@ def calculate_statistics(lyrics):
     logging.info("Calculating Statistics")
     from textstat.textstat import textstat
     for idx, song in tqdm(enumerate(lyrics), total=len(lyrics)):
-        song["num_syllables"] = textstat.syllable_count(lyrics["text_raw"])
-        song["num_words"] = textstat.lexicon_count(lyrics["text_raw"])
-        song["num_sentences"] = textstat.sentence_count(lyrics["text_raw"])
-        song["flesch_score"] = textstat.flesch_reading_ease(lyrics["text_raw"])
-        song["flesch_kincaid_level"] = textstat.flesch_kincaid_grade(lyrics["text_raw"])
-        song["fog_score"] = textstat.gunning_fog(lyrics["text_raw"])
-        song["num_difficult_words"] = textstat.dale_chall_readability_score(lyrics["text_raw"])
+        song["num_syllables"] = textstat.syllable_count(song["text_raw"])
+        song["num_words"] = textstat.lexicon_count(song["text_raw"])
+        song["num_sentences"] = textstat.sentence_count(song["text_raw"])
+        song["flesch_score"] = textstat.flesch_reading_ease(song["text_raw"])
+        song["flesch_kincaid_level"] = textstat.flesch_kincaid_grade(song["text_raw"])
+        song["fog_score"] = textstat.gunning_fog(song["text_raw"])
+        song["num_difficult_words"] = textstat.dale_chall_readability_score(song["text_raw"])
     return lyrics
 
 
-def detect_language(lyrics, *, threshold=0.7):
+def detect_language(lyrics, *, threshold=0.9):
     """
     Annotates the lyrics. Currently only detects English. If English is detected with threshold "en_US" is added, else ""
     :type threshold: How many percent of the lyrics have to be detected to count as English.
@@ -96,7 +97,7 @@ def detect_language(lyrics, *, threshold=0.7):
     for song in tqdm(lyrics):
         checks = [d.check(w) for w in song["text_raw"]]
         ratio = checks.count(True) / len(checks)
-        song["language"] = "en_US" if ratio > 0.7 else ""
+        song["language"] = ratio#"en_US" if ratio > threshold else ""
     return lyrics
 
 
@@ -115,34 +116,107 @@ def extract_keywords(lyrics, *, top_keywords=3):
         song["keywords"] = r.get_ranked_phrases()[:top_keywords]
     return lyrics
 
-def find_topics(lyrics, *, topics = 15, top_words=20):
+
+def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     """
     
     :param lyrics: 
     :return: 
     """
-    logging.info("Finding Topics")
+    import re
+    from nltk.corpus import stopwords
+    from nltk.stem.porter import PorterStemmer
     from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
     from sklearn.decomposition import NMF
 
-    nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
-    tfidf_vectorizer = TfidfVectorizer(max_df=0.85, min_df=10, stop_words="english")
+    def tokenize(text):
+        tokens = nltk.word_tokenize(text)
+        return [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+
+    additional_stopwords = None
+    with FILE_STOPWORDS.open("r") as sf:
+        additional_stopwords = json.load(sf)
+
+
+    regex = re.compile(r"[.:,;-_')(`!?]")
+    stemmer = PorterStemmer()
+    stopset = set(stopwords.words())
+    stopset = stopset.union(additional_stopwords)
+
+    nmf_model = NMF(n_components=n_topics, random_state=1, alpha=.1, l1_ratio=.5)
+    tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))
 
     data = []
-    for s in tqdm(lyrics):
-        data.append(s["text_raw"])
+    for song in tqdm(songs):
+        data.append(song["text_raw"])
+    logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
+    logging.info("Fitting MMF model")
     result = nmf_model.fit_transform(tfidf)
     tfidf_feature_names = tfidf_vectorizer.get_feature_names()
     topics = []
     for topic in tqdm(nmf_model.components_):
-        topics.append([tfidf_feature_names[i] for i in topic.argsort()[:-top_words - 1:-1]])
-
-    for idx, song in enumerate(tqdm(lyrics)):
+        topics.append([tfidf_feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]])
+    for idx, song in tqdm(enumerate(songs)):
         song["topics"] = result[idx].tolist()
+    return lyrics, topics
 
-    return topics, lyrics
 
+def build_index(lyrics):
+    """
+    dictionary maps every token to a list of objects, where
+    each object in the list represents a song.
+    Each song has an id and a list of occurrences of the token
+    in the song given in the format (sentence_id, token_id).
+    Thus, the length of the token list is the document frequency
+    and the length of the places list the term frequency for
+    a certain song.
+
+    {
+    	token: [
+    		{
+    			song: id,
+    			places: [(sentence_id, token_id), (...), (...)]		
+    		},
+    		{...},
+    		{...}
+    	]
+    }
+    :param lyrics: Requires lyrics to have text_tokenized added.
+    :return: 
+    """
+    from nltk.stem.porter import PorterStemmer
+
+    porter_stemmer = PorterStemmer()
+
+    dictionary = dict()
+
+    for idx, song in tqdm(enumerate(lyrics)):
+        for s_id, sentence in enumerate(song["text_tokenized"]):
+            for t_id, token in enumerate(sentence):
+                stemmed_token = porter_stemmer.stem(token.encode("ascii", "ignore"))
+
+                if stemmed_token.isspace() or len(stemmed_token) == 0:
+                    continue
+
+                if stemmed_token not in dictionary:
+                    dictionary[stemmed_token] = [{
+                        "song": song["id"],
+                        "places": [(s_id, t_id)]
+                    }]
+                else:
+                    entry = filter(lambda x: x["song"] == song["id"], dictionary[stemmed_token])
+                    if len(entry) == 0:
+                        dictionary[stemmed_token].append({
+                            "song": song["id"],
+                            "places": [(s_id, t_id)]
+                        })
+                    elif len(entry) == 1:
+                        entry[0]["places"].append((s_id, t_id))
+                    else:
+                        logging.warning("Found an incorrect number of entries for song {} and token {}".format(song["id"],
+                                                                                                     stemmed_token))
+    return dictionary
 
 def save(lyrics, filename):
     """
@@ -150,7 +224,7 @@ def save(lyrics, filename):
     :param filename: The filename. .json is appended. 
     """
     filename += ".json"
-    logging.info("Saving lyrics to {}".format(filename))
+    logging.info("Saving to {}".format(filename))
     outfile = DIR_OUTPUT / filename
     json_string = dumps(lyrics, indent=2)
     outfile.write_text(json_string)
