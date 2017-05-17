@@ -17,3 +17,4 @@ with open(INFILE, "r") as inf:
 			song["num_difficult_words"] = textstat.dale_chall_readability_score(song["text_raw"])
 			print("Processed song {}".format(idx))
 		json.dump(songs, outf, indent=2)
+#
