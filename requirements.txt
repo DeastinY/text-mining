@@ -3,3 +3,8 @@ informationminer
 pylyrics3
 requests
 beautifulsoup4
+pyenchant
+textstat
+pyrake
+deco
+rake_nltk
