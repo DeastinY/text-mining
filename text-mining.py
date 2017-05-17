@@ -43,6 +43,17 @@ def read_emolex():
             emolex[row[0].lower().strip()] = np.array(row[4:], dtype=int)
     return emolex
 
+def tokenize(lyrics):
+    logging.info("Tokenizing")
+    import re
+    from nltk.stem.porter import PorterStemmer
+    regex = re.compile(r"[.:,;-_')(`!?]")
+    stemmer = PorterStemmer()
+    for song in tqdm(lyrics):
+        tokens = nltk.word_tokenize(song["text_raw"])
+        song["text_tokenized"] = [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+    return lyrics
+
 
 def analyze_emotions(lyrics, *, emolex=None, english_only=True):
     """
@@ -97,7 +108,7 @@ def detect_language(lyrics, *, threshold=0.9):
     for song in tqdm(lyrics):
         checks = [d.check(w) for w in song["text_raw"]]
         ratio = checks.count(True) / len(checks)
-        song["language"] = ratio#"en_US" if ratio > threshold else ""
+        song["language"] = "en_US" if ratio > threshold else ""
     return lyrics
 
 
@@ -123,32 +134,19 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     :param lyrics: 
     :return: 
     """
-    import re
     from nltk.corpus import stopwords
-    from nltk.stem.porter import PorterStemmer
     from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
     from sklearn.decomposition import NMF
 
-    def tokenize(text):
-        tokens = nltk.word_tokenize(text)
-        return [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+    additional_stopwords = loads(FILE_STOPWORDS.read_text())
 
-    additional_stopwords = None
-    with FILE_STOPWORDS.open("r") as sf:
-        additional_stopwords = json.load(sf)
-
-
-    regex = re.compile(r"[.:,;-_')(`!?]")
-    stemmer = PorterStemmer()
     stopset = set(stopwords.words())
     stopset = stopset.union(additional_stopwords)
 
-    nmf_model = NMF(n_components=n_topics, random_state=1, alpha=.1, l1_ratio=.5)
-    tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))
+    nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
+    tfidf_vectorizer = TfidfVectorizer(tokenizer=None, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
 
-    data = []
-    for song in tqdm(songs):
-        data.append(song["text_raw"])
+    data = [song["text_raw"] for song in lyrics]
     logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
     logging.info("Fitting MMF model")
@@ -156,67 +154,14 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     tfidf_feature_names = tfidf_vectorizer.get_feature_names()
     topics = []
     for topic in tqdm(nmf_model.components_):
-        topics.append([tfidf_feature_names[i] for i in topic.argsort()[:-n_top_words - 1:-1]])
-    for idx, song in tqdm(enumerate(songs)):
+        topics.append([tfidf_feature_names[i] for i in topic.argsort()[:-top_words - 1:-1]])
+    for idx, song in tqdm(enumerate(lyrics)):
         song["topics"] = result[idx].tolist()
     return lyrics, topics
 
 
 def build_index(lyrics):
-    """
-    dictionary maps every token to a list of objects, where
-    each object in the list represents a song.
-    Each song has an id and a list of occurrences of the token
-    in the song given in the format (sentence_id, token_id).
-    Thus, the length of the token list is the document frequency
-    and the length of the places list the term frequency for
-    a certain song.
-
-    {
-    	token: [
-    		{
-    			song: id,
-    			places: [(sentence_id, token_id), (...), (...)]		
-    		},
-    		{...},
-    		{...}
-    	]
-    }
-    :param lyrics: Requires lyrics to have text_tokenized added.
-    :return: 
-    """
-    from nltk.stem.porter import PorterStemmer
-
-    porter_stemmer = PorterStemmer()
-
-    dictionary = dict()
-
-    for idx, song in tqdm(enumerate(lyrics)):
-        for s_id, sentence in enumerate(song["text_tokenized"]):
-            for t_id, token in enumerate(sentence):
-                stemmed_token = porter_stemmer.stem(token.encode("ascii", "ignore"))
-
-                if stemmed_token.isspace() or len(stemmed_token) == 0:
-                    continue
-
-                if stemmed_token not in dictionary:
-                    dictionary[stemmed_token] = [{
-                        "song": song["id"],
-                        "places": [(s_id, t_id)]
-                    }]
-                else:
-                    entry = filter(lambda x: x["song"] == song["id"], dictionary[stemmed_token])
-                    if len(entry) == 0:
-                        dictionary[stemmed_token].append({
-                            "song": song["id"],
-                            "places": [(s_id, t_id)]
-                        })
-                    elif len(entry) == 1:
-                        entry[0]["places"].append((s_id, t_id))
-                    else:
-                        logging.warning("Found an incorrect number of entries for song {} and token {}".format(song["id"],
-                                                                                                     stemmed_token))
-    return dictionary
+    ...
 
 def save(lyrics, filename):
     """
@@ -231,10 +176,11 @@ def save(lyrics, filename):
 
 
 if __name__ == '__main__':
-    lyrics = loads(FILE_DJENT.read_text())
-    #lyrics = detect_language(lyrics)
-    #save(lyrics, "lan")
-    #lyrics = calculate_statistics(lyrics)
-    #save(lyrics, "lan_stats")
+    lyrics = loads(FILE_DB.read_text())
+    lyrics = detect_language(lyrics)
+    lyrics = calculate_statistics(lyrics)
     lyrics = analyze_emotions(lyrics)
-    save(lyrics, "lan_stats_emo")
+    lyrics = extract_keywords(lyrics)
+    lyrics, topics = find_topics(lyrics)
+    save(topics, "topics")
+    save(lyrics, "lyrics_annotated")
