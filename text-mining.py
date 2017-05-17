@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 FILE_POP = Path("pop.json")
 FILE_DB = Path("db.json")
 FILE_DJENT = Path("djent.json")
-FILE_EMOLEX = Path("EmoLex.cs")
+FILE_EMOLEX = Path("EmoLex.csv")
 FILE_STOPWORDS = Path("stopwords.json")
 DIR_OUTPUT = Path("output")
 EMOTION_CATEGORIES = ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"]
@@ -231,7 +231,7 @@ def save(lyrics, filename):
 
 
 if __name__ == '__main__':
-    lyrics = loads(FILE_POP.read_text())
+    lyrics = loads(FILE_DJENT.read_text())
     lyrics = detect_language(lyrics)
     save(lyrics, "lan")
     lyrics = calculate_statistics(lyrics)
