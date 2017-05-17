@@ -37,7 +37,7 @@ def read_emolex():
     emolex = {}
     import csv
     with FILE_EMOLEX.open("r") as ef:
-        reader = csv.reader(ef)
+        reader = csv.reader(ef, delimiter=';')
         next(reader)  # skip header
         for row in tqdm(reader):
             emolex[row[0].lower().strip()] = np.array(row[4:], dtype=int)
@@ -232,9 +232,9 @@ def save(lyrics, filename):
 
 if __name__ == '__main__':
     lyrics = loads(FILE_DJENT.read_text())
-    lyrics = detect_language(lyrics)
-    save(lyrics, "lan")
-    lyrics = calculate_statistics(lyrics)
-    save(lyrics, "lan_stats")
+    #lyrics = detect_language(lyrics)
+    #save(lyrics, "lan")
+    #lyrics = calculate_statistics(lyrics)
+    #save(lyrics, "lan_stats")
     lyrics = analyze_emotions(lyrics)
     save(lyrics, "lan_stats_emo")

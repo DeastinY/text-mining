@@ -210,7 +210,7 @@ admission;Eintritt;0;0;0;0;0;0;0;0;0;0
 admit;zugeben;0;0;0;0;0;0;0;0;0;0
 admittance;Zulassung;0;0;0;0;0;0;0;0;0;0
 admitted;zugelassen;0;0;0;0;0;0;0;0;0;0
-admitting;zuzugeben;0;0;0;0;0;0;0;0;0;0
+admitting;zuzugeben,;0;0;0;0;0;0;0;0;0;0
 admixture;Beimischung;0;0;0;0;0;0;0;0;0;0
 admonition;Ermahnung;0;1;0;0;0;1;0;0;0;0
 ado;Aufheben;0;0;0;0;0;0;0;0;0;0
@@ -811,7 +811,7 @@ assorted;gemischt;0;0;0;0;0;0;0;0;0;0
 assortment;Sortiment;0;0;0;0;0;0;0;0;0;0
 assuage;beschwichtigen;1;0;0;0;0;0;0;0;0;0
 assumed;angenommen;0;0;0;0;0;0;0;0;0;0
-assuming;unter der Annahme;0;0;0;0;0;0;0;0;0;0
+assuming;unter der Annahme,;0;0;0;0;0;0;0;0;0;0
 assumption;�bernahme;0;0;0;0;0;0;0;0;0;0
 assurance;Sicherheit;1;0;0;0;0;0;0;0;0;1
 assure;versichern;0;0;0;0;0;0;0;0;0;1
@@ -3357,7 +3357,7 @@ dent;Delle;0;0;0;0;0;0;0;0;0;0
 dentistry;Zahnheilkunde;0;0;0;0;0;1;0;0;0;0
 denunciation;Denunziation;0;1;1;0;1;1;0;0;0;0
 deny;verweigern;0;1;1;0;0;0;0;0;0;0
-denying;leugnen;0;1;0;1;0;0;0;0;0;0
+denying;leugnen,;0;1;0;1;0;0;0;0;0;0
 deodorant;Deo;0;0;0;0;0;0;0;0;0;0
 depart;abfahren;0;0;0;1;0;0;0;1;0;0
 departed;abgereist;0;1;0;0;0;0;0;1;0;0
@@ -6890,7 +6890,7 @@ irrelevant;irrelevant;0;1;0;0;0;0;0;0;0;0
 irreparable;irreparabel;0;1;0;0;0;1;0;1;0;0
 irrepressible;unbez�hmbar;0;0;0;0;0;0;0;0;0;0
 irresistible;unwiderstehlich;0;0;0;0;0;0;0;0;0;0
-irrespective;unabh�ngig davon;0;0;0;0;0;0;0;0;0;0
+irrespective;unabh�ngig davon,;0;0;0;0;0;0;0;0;0;0
 irresponsible;unverantwortlich;0;1;0;0;0;0;0;0;0;0
 irreverent;respektlos;0;1;0;0;0;0;0;0;0;0
 irreversible;unumkehrbar;0;0;0;0;0;0;0;0;0;0
@@ -14181,4 +14181,3 @@ zoo;Zoo;0;0;0;0;0;0;0;0;0;0
 zoological;;0;0;0;0;0;0;0;0;0;0
 zoology;Zoologie;0;0;0;0;0;0;0;0;0;0
 zoom;Zoom;0;0;0;0;0;0;0;0;0;0
-
