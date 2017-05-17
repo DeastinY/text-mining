@@ -14,7 +14,6 @@ FILE_EMOLEX = Path("EmoLex.csv")
 FILE_STOPWORDS = Path("stopwords.json")
 DIR_OUTPUT = Path("output")
 EMOTION_CATEGORIES = ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"]
-POOL = ProcessingPool(4)
 
 def get_lyrics(source):
     """
