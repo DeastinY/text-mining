@@ -174,7 +174,7 @@ def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
     tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii",
                                        analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
 
-    english_indices = np.where(np.array([song["language"] for song in lyrics]) == "en")
+    english_indices = np.where(np.array("language" in song and [song["language"] for song in lyrics]) == "en")
     data = [song["text_raw"] for song in lyrics[english_indices]]
     logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
