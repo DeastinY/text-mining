@@ -48,8 +48,12 @@ def tokenize(lyrics):
     regex = re.compile(r"[.:,;-_')(`!?]")
     stemmer = PorterStemmer()
     for song in tqdm(lyrics):
-        tokens = nltk.word_tokenize(song["text_raw"])
-        song["text_tokenized"] = [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+        try:
+            tokens = nltk.word_tokenize(song["text_raw"])
+            song["text_tokenized"] = [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
     return lyrics
 
 
@@ -63,16 +67,20 @@ def analyze_emotions(lyrics, *, emolex=None, english_only=True):
     logging.info("Analyzing Emotions")
     emolex = read_emolex() if not emolex else emolex
     for idx, song in tqdm(enumerate(lyrics), total=len(lyrics)):
-        if "language" in song and english_only and song["language"] != "en_US":
-            continue
-        emotion_vector = np.zeros(8, dtype=int)
-        sentences = [nltk.word_tokenize(s) for s in nltk.sent_tokenize(song["text_raw"])]
-        for sen in sentences:
-            for t in sen:
-                word = t.lower().strip()
-                if word in emolex:
-                    emotion_vector += emolex[word]
-        song["emotions"] = emotion_vector.tolist()
+        try:
+            if "language" in song and english_only and song["language"] != "en_US":
+                continue
+            emotion_vector = np.zeros(8, dtype=int)
+            sentences = [nltk.word_tokenize(s) for s in nltk.sent_tokenize(song["text_raw"])]
+            for sen in sentences:
+                for t in sen:
+                    word = t.lower().strip()
+                    if word in emolex:
+                        emotion_vector += emolex[word]
+            song["emotions"] = emotion_vector.tolist()
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
     return lyrics
 
 
@@ -84,13 +92,17 @@ def calculate_statistics(lyrics):
     logging.info("Calculating Statistics")
     from textstat.textstat import textstat
     for idx, song in tqdm(enumerate(lyrics), total=len(lyrics)):
-        song["num_syllables"] = textstat.syllable_count(song["text_raw"])
-        song["num_words"] = textstat.lexicon_count(song["text_raw"])
-        song["num_sentences"] = textstat.sentence_count(song["text_raw"])
-        song["flesch_score"] = textstat.flesch_reading_ease(song["text_raw"])
-        song["flesch_kincaid_level"] = textstat.flesch_kincaid_grade(song["text_raw"])
-        song["fog_score"] = textstat.gunning_fog(song["text_raw"])
-        song["num_difficult_words"] = textstat.dale_chall_readability_score(song["text_raw"])
+        try:
+            song["num_syllables"] = textstat.syllable_count(song["text_raw"])
+            song["num_words"] = textstat.lexicon_count(song["text_raw"])
+            song["num_sentences"] = textstat.sentence_count(song["text_raw"])
+            song["flesch_score"] = textstat.flesch_reading_ease(song["text_raw"])
+            song["flesch_kincaid_level"] = textstat.flesch_kincaid_grade(song["text_raw"])
+            song["fog_score"] = textstat.gunning_fog(song["text_raw"])
+            song["num_difficult_words"] = textstat.dale_chall_readability_score(song["text_raw"])
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
     return lyrics
 
 
@@ -104,9 +116,13 @@ def detect_language(lyrics, *, threshold=0.9):
     import enchant
     d = enchant.Dict("en_US")
     for song in tqdm(lyrics):
-        checks = [d.check(w) for w in song["text_raw"]]
-        ratio = checks.count(True) / len(checks)
-        song["language"] = "en_US" if ratio > threshold else ""
+        try:
+            checks = [d.check(w) for w in song["text_raw"]]
+            ratio = checks.count(True) / len(checks)
+            song["language"] = "en_US" if ratio > threshold else ""
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
     return lyrics
 
 
@@ -121,8 +137,12 @@ def extract_keywords(lyrics, *, top_keywords=3):
     from rake_nltk import Rake
     r = Rake()
     for idx, song in tqdm(enumerate(lyrics), total=len(lyrics)):
-        r.extract_keywords_from_text(song["text_raw"])
-        song["keywords"] = r.get_ranked_phrases()[:top_keywords]
+        try:
+            r.extract_keywords_from_text(song["text_raw"])
+            song["keywords"] = r.get_ranked_phrases()[:top_keywords]
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
     return lyrics
 
 
@@ -132,17 +152,25 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     :param lyrics: 
     :return: 
     """
+    import re
     from nltk.corpus import stopwords
+    from nltk.stem.porter import PorterStemmer
     from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
     from sklearn.decomposition import NMF
 
     additional_stopwords = loads(FILE_STOPWORDS.read_text())
 
+    def tokenize(text):
+        tokens = nltk.word_tokenize(text)
+        return [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+
+    regex = re.compile(r"[.:,;-_')(`!?]")
+    stemmer = PorterStemmer()
     stopset = set(stopwords.words())
     stopset = stopset.union(additional_stopwords)
 
     nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
-    tfidf_vectorizer = TfidfVectorizer(tokenizer=None, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
+    tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
 
     data = [song["text_raw"] for song in lyrics]
     logging.info("Building TF_IDF features")
@@ -172,13 +200,58 @@ def save(lyrics, filename):
     json_string = dumps(lyrics, indent=2)
     outfile.write_text(json_string)
 
+def merge_json():
+    """
+    Utility function that merges all mergeable (= raw_text field and no collisions) json files in the output directory.
+    Can be used to hack multiprocessing by simply running the program with different modes in parallel and merging later. 
+    :return: A merged json object
+    """
+    logging.info("Merging JSON files")
+    merged = []  # Assume a list of lyric-dicts
+    for f in DIR_OUTPUT.iterdir():
+        if f.is_file() and '.json' in str(f):
+            logging.info("Loading {}".format(f))
+            text = f.read_text()
+            lyrics = loads(text)
+            if isinstance(lyrics, list):
+                for idx, song in enumerate(lyrics), total=len(lyrics):
+                    if len(merged) == 0:  # No need to merge with the first lyrics file
+                        merged = lyrics
+                    for key in song.keys():
+                        if not key in merged[idx]:
+                            merged[idx][key] = song[key]
+                else:
+                    continue  # If we encounter any error, log the warning.
+        logging.warning("Skipping file {}".format(f))
+    return merged
+
 
 if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('mode', type=str, help="Can be language, stats, emotion, keywords or topic.")
+    args = parser.parse_args()
+    
     lyrics = loads(FILE_DB.read_text())
-    lyrics = detect_language(lyrics)
-    lyrics = calculate_statistics(lyrics)
-    lyrics = analyze_emotions(lyrics)
-    lyrics = extract_keywords(lyrics)
-    lyrics, topics = find_topics(lyrics)
-    save(topics, "topics")
-    save(lyrics, "lyrics_annotated")
+
+    if args.mode == 'language':
+        lyrics = detect_language(lyrics)
+        save(lyrics, "language")
+    elif args.mode == 'stats':
+        lyrics = calculate_statistics(lyrics)
+        save(lyrics, "stats")
+    elif args.mode == 'emotion':
+        lyrics = analyze_emotions(lyrics)
+        save(lyrics, "emotion")
+    elif args.mode == 'keywords':
+        lyrics = extract_keywords(lyrics)
+        save(lyrics, "keywords")
+    elif args.mode == 'topics':
+        lyrics, topics = find_topics(lyrics)
+        save(topics, "topics")
+        save(lyrics, "lyrics_annotated")
+    elif args.mode == 'merge':
+        merged = merge_json()
+        save(merged, "merged")
+    else:
+        logging.error("Did not understand mode. Must be language, stats, emotion, keywords or topic")
