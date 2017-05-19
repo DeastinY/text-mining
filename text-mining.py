@@ -68,7 +68,7 @@ def analyze_emotions(lyrics, *, emolex=None, english_only=True):
     emolex = read_emolex() if not emolex else emolex
     for idx, song in tqdm(enumerate(lyrics), total=len(lyrics)):
         try:
-            if "language" in song and english_only and song["language"] != "en_US":
+            if "language" in song and english_only and song["language"] != "en":
                 continue
             emotion_vector = np.zeros(8, dtype=int)
             sentences = [nltk.word_tokenize(s) for s in nltk.sent_tokenize(song["text_raw"])]
@@ -106,23 +106,15 @@ def calculate_statistics(lyrics):
     return lyrics
 
 
-def detect_language(lyrics, *, threshold=0.9):
+def detect_language(lyrics):
     """
-    Annotates the lyrics. Currently only detects English. If English is detected with threshold "en_US" is added, else ""
-    :type threshold: How many percent of the lyrics have to be detected to count as English.
+    Detects a song's language. Always assigns the most probable language tag, even if the text is utter nonsense.
     :return: 
     """
     logging.info("Detecting language")
-    import enchant
-    d = enchant.Dict("en_US")
+    from langdetect import detect
     for song in tqdm(lyrics):
-        try:
-            checks = [d.check(w) for w in song["text_raw"]]
-            ratio = checks.count(True) / len(checks)
-            song["language"] = "en_US" if ratio > threshold else ""
-        except Exception as e:
-            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
-            logging.exception(e)
+        song["language"] = detect(song["text_raw"])
     return lyrics
 
 
