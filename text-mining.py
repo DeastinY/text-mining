@@ -56,7 +56,7 @@ def tokenize(lyrics):
     return lyrics
 
 
-def analyze_emotions(lyrics, *, emolex=None, english_only=True):
+def analyze_emotions(lyrics, *, emolex=None):
     """
     Analyzes emotions based on EmoLex. Annotates the passed lyrics.
     :param lyrics: The lyrics.
@@ -67,8 +67,13 @@ def analyze_emotions(lyrics, *, emolex=None, english_only=True):
     emolex = read_emolex() if not emolex else emolex
     for idx, song in tqdm(enumerate(lyrics), total=len(lyrics)):
         try:
-            if "language" in song and english_only and song["language"] != "en":
+            if not "language" in song:
+                logging.warning("Song is not annotated with language. Execute detect_language first !")
                 continue
+            if song["language"] != "en":
+                logging.debug("Skipping {} as it's not English.".format(song["title"]))
+                continue
+
             emotion_vector = np.zeros(8, dtype=int)
             sentences = [nltk.word_tokenize(s) for s in nltk.sent_tokenize(song["text_raw"])]
             for sen in sentences:
@@ -113,7 +118,11 @@ def detect_language(lyrics):
     logging.info("Detecting language")
     from langdetect import detect
     for song in tqdm(lyrics):
-        song["language"] = detect(song["text_raw"])
+        try:
+            song["language"] = detect(song["text_raw"])
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
     return lyrics
 
 
@@ -162,6 +171,16 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
 
     nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
     tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
+
+    data = []
+    for song in lyrics:
+        if "language" in song:
+            if song["language"] == "en":
+                data.append(song["text_raw"])
+            else:
+                logging.debug("Skipping {} as it's not English.".format(song["title"]))
+        else:
+            logging.warning("Song is not annotated with language. Execute detect_language first !")
 
     data = [song["text_raw"] for song in lyrics if song["language"] == "en"]
     logging.info("Building TF_IDF features")
