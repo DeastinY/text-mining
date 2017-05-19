@@ -181,8 +181,7 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
                 logging.debug("Skipping {} as it's not English.".format(song["title"]))
         else:
             logging.warning("Song is not annotated with language. Execute detect_language first !")
-
-    data = [song["text_raw"] for song in lyrics if song["language"] == "en"]
+fin
     logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
     logging.info("Fitting MMF model")
@@ -241,8 +240,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('mode', type=str, help="Can be language, stats, emotion, keywords or topic.")
     args = parser.parse_args()
-    
-    lyrics = loads(FILE_DB.read_text())
+
+    file_merged = Path("output/db_merged.json")
+    lyrics = loads(file_merged.read_text())
     prefix = "db_"
 
     if args.mode == 'language':
