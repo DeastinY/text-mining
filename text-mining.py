@@ -146,9 +146,9 @@ def extract_keywords(lyrics, *, top_keywords=3):
     return lyrics
 
 
-def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
+def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
     """
-    
+
     :param lyrics: 
     :return: 
     """
@@ -158,6 +158,7 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
     from sklearn.decomposition import NMF
 
+    lyrics = np.array(lyrics)
     additional_stopwords = loads(FILE_STOPWORDS.read_text())
 
     def tokenize(text):
@@ -170,29 +171,24 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     stopset = stopset.union(additional_stopwords)
 
     nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
-    tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
+    tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii",
+                                       analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
 
-    data = []
-    for song in lyrics:
-        if "language" in song:
-            if song["language"] == "en":
-                data.append(song["text_raw"])
-            else:
-                logging.debug("Skipping {} as it's not English.".format(song["title"]))
-        else:
-            logging.warning("Song is not annotated with language. Execute detect_language first !")
-fin
+    english_indices = np.where(np.array([song["language"] for song in lyrics]) == "en")
+    data = [song["text_raw"] for song in lyrics[english_indices]]
     logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
-    logging.info("Fitting MMF model")
+    logging.info("Fitting NMF model")
     result = nmf_model.fit_transform(tfidf)
     tfidf_feature_names = tfidf_vectorizer.get_feature_names()
     topics = []
-    for topic in tqdm(nmf_model.components_):
+    for topic in nmf_model.components_:
         topics.append([tfidf_feature_names[i] for i in topic.argsort()[:-top_words - 1:-1]])
-    for idx, song in tqdm(enumerate(lyrics)):
-        song["topics"] = result[idx].tolist()
-    return lyrics, topics
+
+    for idx, topic_vec in enumerate(result):
+        lyrics[english_indices[idx]]["topics"] = topic_vec.tolist()
+
+    return lyrics.tolist(), topics
 
 
 def build_index(lyrics):
