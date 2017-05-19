@@ -181,9 +181,9 @@ def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
 ### Visualization
 
 
-def generate_wordclouds(lyrics):
+def generate_wordclouds(lyrics, missing_only=True):
     """
-    Generates wordclouds for artists, songs, emotions and topics.
+    Generates wordclouds for artists songs and the emotions
     :param lyrics: The lyrics to work on, annotated with emotions. Saves the results to OUTPUT_DIR/WORDCLOUDS.
     :return: Nothing. Saves to OUTPUT_DIR/wordclouds.
     """
@@ -194,24 +194,55 @@ def generate_wordclouds(lyrics):
     artist_texts = {}
     artist_emotions = {}
     for song in lyrics:
-        title, artist, text, emotions = song["title"], song["artist"], song["text_raw"], song["emotions"]
-        if artist not in wordclouds:
-            wordclouds[artist] = {}
-            artist_texts[artist] = []
-            artist_emotions[artist] = []
-        artist_texts[artist].append(text)
-        artist_emotions[artist].append(emotions)
-        wordclouds[artist][title] = wc.generate(text)
-    for artist, texts in artist_texts.items():
-        wordclouds[artist]['general'] = wc.generate(texts)
-    for artist, emotions in artist_emotions.items():
-        wordclouds[artist]['emotions'] = wc.generate(emotions)
+        try:
+            title, artist, text, emotions = song["title"], song["artist"], song["text_raw"], song["emotions"]
+            if artist not in wordclouds:
+                wordclouds[artist] = {}
+                artist_texts[artist] = []
+                artist_emotions[artist] = []
+            artist_texts[artist].append(text)
+            # Add the most significant emotion per song
+            artist_emotions[artist].append(EMOTION_CATEGORIES[emotions.index(max(emotions))])
+            #wordclouds[artist][title] = wc.generate(text)
+        except Exception as e:
+            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
+            logging.exception(e)
+
+    outdir = DIR_OUTPUT / "wordclouds"
+    outdir.mkdir(exist_ok=True)
+    logging.info("Generating artist wordclouds")
+    for artist, text in tqdm(artist_texts.items()):
+        try:
+            outfile = outdir / str(artist).strip().replace(' ', '_').replace('/', '')
+            if missing_only and (outfile/"general.png").is_file():
+                continue
+            else:
+                outfile.mkdir(exist_ok=True)
+            if len(text) < 20:  # ignore small and broken songs that make wordcloud suffer
+                continue
+            elif len(text) > 10000:
+                logging.error("Artist {} has {} words in his lyrics. Skipping due to memory constraints.".format(artist, len(text)))
+                continue
+            cloud = wc.generate(" ".join(text))
+            cloud.to_file(str(outfile / "general.png"))
+        except ZeroDivisionError as e:  # TODO: Investigate why this happens
+            pass
+    logging.info("Generating artist emotion wordclouds")
+    for artist, emotions in tqdm(artist_emotions.items()):
+        try:
+            outfile = outdir / str(artist).strip().replace(' ', '_').replace('/', '')
+            if missing_only and (outfile/"emotions.png").is_file():
+                continue
+            else:
+                outfile.mkdir(exist_ok=True)
+            if len(emotions) == 0:
+                continue
+            cloud = wc.generate(" ".join(emotions))
+            cloud.to_file(str(outfile / "emotions.png"))
+        except ZeroDivisionError as e: # TODO: Investigate why this happens
+            pass
     logging.info("Saving wordclouds")
-    for artist in wordclouds.keys():
-        outfile = DIR_OUTPUT / "wordclouds" / artist
-        wordclouds[artist]['general'].to_file(str(outfile/"_general"))
-        wordclouds[artist]['emotions'].to_file(str(outfile/"_emotions"))
-    return wordclouds
+
 
 ### Not Implemented
 
@@ -310,6 +341,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     file_merged = Path("output/db_merged.json")
+    logging.info("Loading {}".format(file_merged))
     lyrics = loads(file_merged.read_text())
     prefix = "db_"
 
@@ -334,6 +366,5 @@ if __name__ == '__main__':
         save(merged, prefix + "merged")
     elif args.mode == 'wordclouds':
         wordclouds = generate_wordclouds(lyrics)
-        save(wordclouds, prefix + "wordclouds")
     else:
         logging.error("Did not understand mode. Must be language, stats, emotion, keywords, topics, wordclouds")
