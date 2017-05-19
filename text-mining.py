@@ -6,7 +6,7 @@ import nltk
 import numpy as np
 from tqdm import tqdm
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 FILE_POP = Path("pop.json")
 FILE_DB = Path("db.json")
 FILE_DJENT = Path("djent.json")
@@ -189,12 +189,15 @@ def generate_wordclouds(lyrics, missing_only=True):
     """
     logging.info("Building wordclouds")
     from wordcloud import WordCloud
-    wc = WordCloud()
+    wc = WordCloud(scale=2, stopwords=loads(FILE_STOPWORDS.read_text()))
     wordclouds = {}
     artist_texts = {}
     artist_emotions = {}
     for song in lyrics:
         try:
+            if not "emotions" in song:
+                logging.debug("Skipping song as no emotion information is available. {}".format(song["title"]))
+                continue
             title, artist, text, emotions = song["title"], song["artist"], song["text_raw"], song["emotions"]
             if artist not in wordclouds:
                 wordclouds[artist] = {}
@@ -219,15 +222,11 @@ def generate_wordclouds(lyrics, missing_only=True):
                 continue
             else:
                 outfile.mkdir(exist_ok=True)
-            if len(text) < 20:  # ignore small and broken songs that make wordcloud suffer
-                continue
-            elif len(text) > 10000:
-                logging.error("Artist {} has {} words in his lyrics. Skipping due to memory constraints.".format(artist, len(text)))
-                continue
-            cloud = wc.generate(" ".join(text))
-            cloud.to_file(str(outfile / "general.png"))
+            if len(text) != 0:
+                cloud = wc.generate(" ".join(text))
+                cloud.to_file(str(outfile / "general.png"))
         except ZeroDivisionError as e:  # TODO: Investigate why this happens
-            pass
+            logging.error("ZeroDivisionError on text for {}".format(artist))
     logging.info("Generating artist emotion wordclouds")
     for artist, emotions in tqdm(artist_emotions.items()):
         try:
@@ -236,12 +235,11 @@ def generate_wordclouds(lyrics, missing_only=True):
                 continue
             else:
                 outfile.mkdir(exist_ok=True)
-            if len(emotions) == 0:
-                continue
-            cloud = wc.generate(" ".join(emotions))
-            cloud.to_file(str(outfile / "emotions.png"))
+            if len(text) != 0:
+                cloud = wc.generate(" ".join(emotions))
+                cloud.to_file(str(outfile / "emotions.png"))
         except ZeroDivisionError as e: # TODO: Investigate why this happens
-            pass
+            logging.error("ZeroDivisionError on emotions for {}".format(artist))
     logging.info("Saving wordclouds")
 
 
@@ -358,7 +356,7 @@ if __name__ == '__main__':
 
     file_merged = Path("output/db_merged.json")
     logging.info("Loading file")
-    lyrics = loads(FILE_DB.read_text())
+    lyrics = loads(file_merged.read_text())
     prefix = "db_"
 
     if args.mode == 'create':

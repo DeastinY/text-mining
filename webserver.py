@@ -15,12 +15,13 @@ def get_artists():
 @app.route("/", methods=["POST", "GET"])
 def index():
     artists = get_artists()
-    general, emotions = None, None
+    general, emotions, title = None, None, "Enter a search ..."
     if len(request.form) > 0:
         artist = request.form['artists']
         general = artist + "/general.png"
         emotions = artist + "/emotions.png"
-    return render_template('index.html', artists=artists, general=general, emotions=emotions)
+        title = "{}".format(artist)
+    return render_template('index.html', artists=artists, general=general, emotions=emotions, title=title)
 
 if __name__ == "__main__":
     app.run()

@@ -61,13 +61,14 @@
               </datalist>
               <input class="btn btn-outline-success" type="submit"></input>
           </form>
-          <div class="text-center">
+          <div class="text-center" style="margin: 10pt;">
+            <h2>{{ title }}</h2>
               {% if general != None %}
-                <img src="{{'static/'+general}}" class="rounded"/>
+                <img src="{{'static/'+general}}" class="rounded" style="margin: 2pt;"/>
               {% endif %}
               <br/>
               {% if emotions != None%}
-                <img src="{{'static/'+emotions}}" class="rounded"/>
+                <img src="{{'static/'+emotions}}" class="rounded" style="margin: 2pt;"/>
               {% endif %}
           </div>
         </div>
