@@ -1,4 +1,3 @@
-from deco import concurrent, synchronized
 from json import loads, dumps
 from tqdm import tqdm
 from pathlib import Path
@@ -164,7 +163,7 @@ def find_topics(lyrics, *, features = 3000, topics = 10, top_words=20):
     nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
     tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii", analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
 
-    data = [song["text_raw"] for song in lyrics]
+    data = [song["text_raw"] for song in lyrics if song["language"] == "en"]
     logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
     logging.info("Fitting MMF model")

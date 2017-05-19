@@ -6,5 +6,5 @@ beautifulsoup4
 pyenchant
 textstat
 pyrake
-deco
+langdetect
 rake_nltk
