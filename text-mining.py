@@ -225,25 +225,26 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     lyrics = loads(FILE_DB.read_text())
+    prefix = "db_"
 
     if args.mode == 'language':
         lyrics = detect_language(lyrics)
-        save(lyrics, "language")
+        save(lyrics, prefix+"language")
     elif args.mode == 'stats':
         lyrics = calculate_statistics(lyrics)
-        save(lyrics, "stats")
+        save(lyrics, prefix+"stats")
     elif args.mode == 'emotion':
         lyrics = analyze_emotions(lyrics)
-        save(lyrics, "emotion")
+        save(lyrics, prefix+"emotion")
     elif args.mode == 'keywords':
         lyrics = extract_keywords(lyrics)
-        save(lyrics, "keywords")
+        save(lyrics, prefix+"keywords")
     elif args.mode == 'topics':
         lyrics, topics = find_topics(lyrics)
-        save(topics, "topics")
+        save(topics, prefix+"topics")
         save(lyrics, "lyrics_annotated")
     elif args.mode == 'merge':
         merged = merge_json()
-        save(merged, "merged")
+        save(merged, prefix+"merged")
     else:
         logging.error("Did not understand mode. Must be language, stats, emotion, keywords or topic")
