@@ -120,9 +120,9 @@ def detect_language(lyrics):
     for song in tqdm(lyrics):
         try:
             song["language"] = detect(song["text_raw"])
-        except Exception as e:
-            logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
-            logging.exception(e)
+        except Exception:
+            logging.error("Could not detect language for the song. Setting to ?... \n{}".format(song))
+            song["language"] = "?"
     return lyrics
 
 
@@ -174,7 +174,7 @@ def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
     tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii",
                                        analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
 
-    english_indices = np.where(np.array("language" in song and [song["language"] for song in lyrics]) == "en")
+    english_indices = np.where(np.array([song["language"] for song in lyrics]) == "en")[0]
     data = [song["text_raw"] for song in lyrics[english_indices]]
     logging.info("Building TF_IDF features")
     tfidf = tfidf_vectorizer.fit_transform(data)
@@ -234,7 +234,7 @@ def merge_json():
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode', type=str, help="Can be language, stats, emotion, keywords or topic.")
+    parser.add_argument('mode', type=str, help="Can be language, stats, emotions, keywords or topics.")
     args = parser.parse_args()
 
     file_merged = Path("output/db_merged.json")
@@ -247,16 +247,16 @@ if __name__ == '__main__':
     elif args.mode == 'stats':
         lyrics = calculate_statistics(lyrics)
         save(lyrics, prefix+"stats")
-    elif args.mode == 'emotion':
+    elif args.mode == 'emotions':
         lyrics = analyze_emotions(lyrics)
-        save(lyrics, prefix+"emotion")
+        save(lyrics, prefix+"emotions")
     elif args.mode == 'keywords':
         lyrics = extract_keywords(lyrics)
         save(lyrics, prefix+"keywords")
     elif args.mode == 'topics':
         lyrics, topics = find_topics(lyrics)
-        save(topics, prefix+"topics")
-        save(lyrics, "lyrics_annotated")
+        save(topics, prefix+"just_topics")
+        save(lyrics, prefix+"topics")
     elif args.mode == 'merge':
         merged = merge_json()
         save(merged, prefix+"merged")
