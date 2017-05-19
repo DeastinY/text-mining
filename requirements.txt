@@ -9,3 +9,4 @@ pyrake
 langdetect
 rake_nltk
 wordcloud
+flask

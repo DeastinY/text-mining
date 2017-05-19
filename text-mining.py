@@ -6,7 +6,7 @@ import nltk
 import numpy as np
 from tqdm import tqdm
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 FILE_POP = Path("pop.json")
 FILE_DB = Path("db.json")
 FILE_DJENT = Path("djent.json")
@@ -200,10 +200,11 @@ def generate_wordclouds(lyrics, missing_only=True):
                 wordclouds[artist] = {}
                 artist_texts[artist] = []
                 artist_emotions[artist] = []
-            artist_texts[artist].append(text)
-            # Add the most significant emotion per song
-            artist_emotions[artist].append(EMOTION_CATEGORIES[emotions.index(max(emotions))])
-            #wordclouds[artist][title] = wc.generate(text)
+            else:
+                artist_texts[artist].append(text)
+                # Add the most significant emotion per song
+                artist_emotions[artist].append(EMOTION_CATEGORIES[emotions.index(max(emotions))])
+                #wordclouds[artist][title] = wc.generate(text)
         except Exception as e:
             logging.error("Something bad happened in the current song ! Skipping it... \n{}".format(song))
             logging.exception(e)
@@ -270,6 +271,21 @@ def get_lyrics(source):
 
 
 ### Util
+
+def read_database():
+    """Generates a new json file from the db.sqlite database."""
+    import sqlite3
+    conn = sqlite3.connect('db.sqlite')
+    c = conn.cursor()
+    raw_data = [r for r in c.execute(r"SELECT A.name, S.name, S.lyric FROM artistSongs B JOIN artist A on B.artistId = A.id JOIN songs S on B.songId = S.id;")]
+    lyrics = []
+    for r in raw_data:
+        lyrics.append({
+            "artist": r[0],
+            "title": r[1],
+            "text_raw": r[2]
+        })
+    return lyrics
 
 
 def read_emolex():
@@ -341,11 +357,15 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     file_merged = Path("output/db_merged.json")
-    logging.info("Loading {}".format(file_merged))
-    lyrics = loads(file_merged.read_text())
+    logging.info("Loading file")
+    lyrics = loads(FILE_DB.read_text())
     prefix = "db_"
 
-    if args.mode == 'language':
+    if args.mode == 'create':
+        db = read_database()
+        logging.info("Saving database to db.json")
+        Path("db.json").write_text(dumps(db))
+    elif args.mode == 'language':
         lyrics = detect_language(lyrics)
         save(lyrics, prefix + "language")
     elif args.mode == 'stats':
