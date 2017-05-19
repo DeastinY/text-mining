@@ -205,7 +205,7 @@ def merge_json():
             text = f.read_text()
             lyrics = loads(text)
             if isinstance(lyrics, list):
-                for idx, song in enumerate(lyrics), total=len(lyrics):
+                for idx, song in enumerate(lyrics):
                     if len(merged) == 0:  # No need to merge with the first lyrics file
                         merged = lyrics
                     for key in song.keys():
