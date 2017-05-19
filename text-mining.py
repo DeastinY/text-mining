@@ -1,9 +1,10 @@
-from json import loads, dumps
-from tqdm import tqdm
-from pathlib import Path
-import numpy as np
 import logging
+from json import loads, dumps
+from pathlib import Path
+
 import nltk
+import numpy as np
+from tqdm import tqdm
 
 logging.basicConfig(level=logging.INFO)
 FILE_POP = Path("pop.json")
@@ -14,31 +15,9 @@ FILE_STOPWORDS = Path("stopwords.json")
 DIR_OUTPUT = Path("output")
 EMOTION_CATEGORIES = ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"]
 
-def get_lyrics(source):
-    """
-    Grabs lyrics either based on the Bilboard Top 100 or got-djent.com.
-    :param source: Either "pop" or "djent"
-    :return: The crawled lyrics.
-    """
-    logging.info("Grabbing Lyrics")
-    logging.warning("NOT IMPLEMENTED")
-    ...
 
+### Text Processing
 
-def read_emolex():
-    """
-    Reads the EmoLex csv file.
-    :return: A dictionary with the contents.
-    """
-    logging.info("Reading {}".format(FILE_EMOLEX))
-    emolex = {}
-    import csv
-    with FILE_EMOLEX.open("r") as ef:
-        reader = csv.reader(ef, delimiter=';')
-        next(reader)  # skip header
-        for row in tqdm(reader):
-            emolex[row[0].lower().strip()] = np.array(row[4:], dtype=int)
-    return emolex
 
 def tokenize(lyrics):
     logging.info("Tokenizing")
@@ -148,14 +127,19 @@ def extract_keywords(lyrics, *, top_keywords=3):
 
 def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
     """
-
-    :param lyrics: 
-    :return: 
+    Finds topics and annotates them to the lyrics.
+    
+    
+    :param lyrics: The lyrics to work on. Need to have the language tag, will only consider "en" songs.
+    :param features: How many features to consider.
+    :param topics: How many topics to generate.
+    :param top_words: How many words to return per topic. 
+    :return: Annotated lyrics and a list of topics.
     """
     import re
     from nltk.corpus import stopwords
     from nltk.stem.porter import PorterStemmer
-    from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+    from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.decomposition import NMF
 
     lyrics = np.array(lyrics)
@@ -163,7 +147,11 @@ def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
 
     def tokenize(text):
         tokens = nltk.word_tokenize(text)
-        return [stemmer.stem(token) for token in tokens if len(regex.findall(token)) == 0]
+        tokens = [token for token in tokens if len(regex.findall(token)) == 0]
+        try:
+            return [stemmer.stem(token) for token in tokens]
+        except IndexError:  # No idea where this comes from TODO: Investigate
+            return tokens
 
     regex = re.compile(r"[.:,;-_')(`!?]")
     stemmer = PorterStemmer()
@@ -173,7 +161,6 @@ def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
     nmf_model = NMF(n_components=topics, random_state=1, alpha=.1, l1_ratio=.5)
     tfidf_vectorizer = TfidfVectorizer(tokenizer=tokenize, max_df=0.75, max_features=features, strip_accents="ascii",
                                        analyzer="word", stop_words=list(stopset))  # TODO: Add custom tokenizer again
-
     english_indices = np.where(np.array([song["language"] for song in lyrics]) == "en")[0]
     data = [song["text_raw"] for song in lyrics[english_indices]]
     logging.info("Building TF_IDF features")
@@ -191,8 +178,84 @@ def find_topics(lyrics, *, features=3000, topics=10, top_words=20):
     return lyrics.tolist(), topics
 
 
+### Visualization
+
+
+def generate_wordclouds(lyrics):
+    """
+    Generates wordclouds for artists, songs, emotions and topics.
+    :param lyrics: The lyrics to work on, annotated with emotions. Saves the results to OUTPUT_DIR/WORDCLOUDS.
+    :return: Nothing. Saves to OUTPUT_DIR/wordclouds.
+    """
+    logging.info("Building wordclouds")
+    from wordcloud import WordCloud
+    wc = WordCloud()
+    wordclouds = {}
+    artist_texts = {}
+    artist_emotions = {}
+    for song in lyrics:
+        title, artist, text, emotions = song["title"], song["artist"], song["text_raw"], song["emotions"]
+        if artist not in wordclouds:
+            wordclouds[artist] = {}
+            artist_texts[artist] = []
+            artist_emotions[artist] = []
+        artist_texts[artist].append(text)
+        artist_emotions[artist].append(emotions)
+        wordclouds[artist][title] = wc.generate(text)
+    for artist, texts in artist_texts.items():
+        wordclouds[artist]['general'] = wc.generate(texts)
+    for artist, emotions in artist_emotions.items():
+        wordclouds[artist]['emotions'] = wc.generate(emotions)
+    logging.info("Saving wordclouds")
+    for artist in wordclouds.keys():
+        outfile = DIR_OUTPUT / "wordclouds" / artist
+        wordclouds[artist]['general'].to_file(str(outfile/"_general"))
+        wordclouds[artist]['emotions'].to_file(str(outfile/"_emotions"))
+    return wordclouds
+
+### Not Implemented
+
+
 def build_index(lyrics):
+    """
+        Builds a TF-IDF index.
+        :param lyrics: The lyrics.
+        :return: The index.
+        """
+    logging.info("Grabbing Lyrics")
+    logging.warning("NOT IMPLEMENTED")
     ...
+
+
+def get_lyrics(source):
+    """
+    Grabs lyrics either based on the Bilboard Top 100 or got-djent.com.
+    :param source: Either "pop" or "djent"
+    :return: The crawled lyrics.
+    """
+    logging.info("Grabbing Lyrics")
+    logging.warning("NOT IMPLEMENTED")
+    ...
+
+
+### Util
+
+
+def read_emolex():
+    """
+    Reads the EmoLex csv file.
+    :return: A dictionary with the contents.
+    """
+    logging.info("Reading {}".format(FILE_EMOLEX))
+    emolex = {}
+    import csv
+    with FILE_EMOLEX.open("r") as ef:
+        reader = csv.reader(ef, delimiter=';')
+        next(reader)  # skip header
+        for row in tqdm(reader):
+            emolex[row[0].lower().strip()] = np.array(row[4:], dtype=int)
+    return emolex
+
 
 def save(lyrics, filename):
     """
@@ -205,6 +268,7 @@ def save(lyrics, filename):
     json_string = dumps(lyrics, indent=2)
     outfile.write_text(json_string)
 
+
 def merge_json():
     """
     Utility function that merges all mergeable (= raw_text field and no collisions) json files in the output directory.
@@ -214,27 +278,35 @@ def merge_json():
     logging.info("Merging JSON files")
     merged = []  # Assume a list of lyric-dicts
     for f in DIR_OUTPUT.iterdir():
-        if f.is_file() and '.json' in str(f):
-            logging.info("Loading {}".format(f))
-            text = f.read_text()
-            lyrics = loads(text)
-            if isinstance(lyrics, list):
-                for idx, song in enumerate(lyrics):
-                    if len(merged) == 0:  # No need to merge with the first lyrics file
-                        merged = lyrics
-                    for key in song.keys():
-                        if not key in merged[idx]:
-                            merged[idx][key] = song[key]
-                else:
-                    continue  # If we encounter any error, log the warning.
-        logging.warning("Skipping file {}".format(f))
+        error = False
+        if not f.is_file() or not '.json' in str(f):
+            logging.warning("Skipping file {}".format(f))
+            continue
+        logging.info("Loading {}".format(f))
+        text = f.read_text()
+        lyrics = loads(text)
+        if not isinstance(lyrics, list):
+            logging.warning("Skipping file {}".format(f))
+            continue
+        for idx, song in enumerate(lyrics):
+            if not isinstance(song, dict):
+                logging.warning("Skipping file {}".format(f))
+                break
+            if len(merged) == 0:  # No need to merge with the first lyrics file
+                merged = lyrics
+            for key in song.keys():
+                if not key in merged[idx]:
+                    merged[idx][key] = song[key]
+
+
     return merged
 
 
 if __name__ == '__main__':
     import argparse
+
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode', type=str, help="Can be language, stats, emotions, keywords or topics.")
+    parser.add_argument('mode', type=str, help="Can be language, stats, emotions, keywords, topics, wordclouds.")
     args = parser.parse_args()
 
     file_merged = Path("output/db_merged.json")
@@ -243,22 +315,25 @@ if __name__ == '__main__':
 
     if args.mode == 'language':
         lyrics = detect_language(lyrics)
-        save(lyrics, prefix+"language")
+        save(lyrics, prefix + "language")
     elif args.mode == 'stats':
         lyrics = calculate_statistics(lyrics)
-        save(lyrics, prefix+"stats")
+        save(lyrics, prefix + "stats")
     elif args.mode == 'emotions':
         lyrics = analyze_emotions(lyrics)
-        save(lyrics, prefix+"emotions")
+        save(lyrics, prefix + "emotions")
     elif args.mode == 'keywords':
         lyrics = extract_keywords(lyrics)
-        save(lyrics, prefix+"keywords")
+        save(lyrics, prefix + "keywords")
     elif args.mode == 'topics':
         lyrics, topics = find_topics(lyrics)
-        save(topics, prefix+"just_topics")
-        save(lyrics, prefix+"topics")
+        save(topics, prefix + "just_topics")
+        save(lyrics, prefix + "topics")
     elif args.mode == 'merge':
         merged = merge_json()
-        save(merged, prefix+"merged")
+        save(merged, prefix + "merged")
+    elif args.mode == 'wordclouds':
+        wordclouds = generate_wordclouds(lyrics)
+        save(wordclouds, prefix + "wordclouds")
     else:
-        logging.error("Did not understand mode. Must be language, stats, emotion, keywords or topic")
+        logging.error("Did not understand mode. Must be language, stats, emotion, keywords, topics, wordclouds")
