@@ -1,0 +1,3015 @@
+<?xml version="1.0" ?>
+<graphml>
+    <key attr.name="label" attr.type="string" id="label"/>
+    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+    <graph edgedefault="directed" id="">
+        <node id="Kendrick Lamar"/>
+        <node id="Gorillaz"/>
+        <node id="Ed Sheeran"/>
+        <node id="Bruno Mars"/>
+        <node id="Drake"/>
+        <node id="Mary J. Blige"/>
+        <node id="The Chainsmokers"/>
+        <node id="DJ Khaled"/>
+        <node id="Future"/>
+        <node id="The Weeknd"/>
+        <node id="Justin Bieber"/>
+        <node id="Shawn Mendes"/>
+        <node id="Imagine Dragons"/>
+        <node id="Rihanna"/>
+        <node id="Migos"/>
+        <node id="Sam Hunt"/>
+        <node id="Willie Nelson"/>
+        <node id="Alessia Cara"/>
+        <node id="Lil Uzi Vert"/>
+        <node id="Selena Gomez"/>
+        <node id="Harry Styles"/>
+        <node id="James Arthur"/>
+        <node id="Adele"/>
+        <node id="Maroon 5"/>
+        <node id="Julia Michaels"/>
+        <node id="Metallica"/>
+        <node id="twenty one pilots"/>
+        <node id="Lady Gaga"/>
+        <node id="John Mellencamp"/>
+        <node id="Keith Urban"/>
+        <node id="Coldplay"/>
+        <node id="Niall Horan"/>
+        <node id="Halsey"/>
+        <node id="Post Malone"/>
+        <node id="Kodak Black"/>
+        <node id="Brett Young"/>
+        <node id="Katy Perry"/>
+        <node id="Khalid"/>
+        <node id="Kygo"/>
+        <node id="Travis Scott"/>
+        <node id="Chris Stapleton"/>
+        <node id="Daddy Yankee"/>
+        <node id="Luis Fonsi"/>
+        <node id="Big Sean"/>
+        <node id="Florida Georgia Line"/>
+        <node id="Taylor Swift"/>
+        <node id="Justin Timberlake"/>
+        <node id="Wale"/>
+        <node id="Rae Sremmurd"/>
+        <node id="Fall Out Boy"/>
+        <node id="J. Cole"/>
+        <node id="Zedd"/>
+        <node id="Eminem"/>
+        <node id="Clean Bandit"/>
+        <node id="Luke Combs"/>
+        <node id="Calvin Harris"/>
+        <node id="Jason Aldean"/>
+        <node id="Nicki Minaj"/>
+        <node id="Thomas Rhett"/>
+        <node id="Blake Shelton"/>
+        <node id="Lea Michele"/>
+        <node id="Childish Gambino"/>
+        <node id="Chris Brown"/>
+        <node id="Lil Yachty"/>
+        <node id="Grateful Dead"/>
+        <node id="Michael Jackson"/>
+        <node id="Charlie Puth"/>
+        <node id="Jon Pardi"/>
+        <node id="Ariana Grande"/>
+        <node id="Dierks Bentley"/>
+        <node id="Gucci Mane"/>
+        <node id="Sia"/>
+        <node id="Kelsea Ballerini"/>
+        <node id="Brad Paisley"/>
+        <node id="New Found Glory"/>
+        <node id="Sylvan Esso"/>
+        <node id="Darius Rucker"/>
+        <node id="Little Big Town"/>
+        <node id="Luke Bryan"/>
+        <node id="Machine Gun Kelly"/>
+        <node id="Zayn"/>
+        <node id="Train"/>
+        <node id="Brantley Gilbert"/>
+        <node id="Josh Turner"/>
+        <node id="OneRepublic"/>
+        <node id="Logic"/>
+        <node id="Linkin Park"/>
+        <node id="Journey"/>
+        <node id="Hailee Steinfeld"/>
+        <node id="Jason Derulo"/>
+        <node id="Nirvana"/>
+        <node id="Shakira"/>
+        <node id="MercyMe"/>
+        <node id="Panic! At The Disco"/>
+        <node id="Carlene Carter"/>
+        <node id="volumes"/>
+        <node id="fellsilent"/>
+        <node id="textures"/>
+        <node id="skyharbor"/>
+        <node id="born of osiris"/>
+        <node id="uneven structure"/>
+        <node id="vildhjarta"/>
+        <node id="monuments"/>
+        <node id="bulb"/>
+        <node id="periphery"/>
+        <node id="veil of maya"/>
+        <node id="meshuggah"/>
+        <node id="structures"/>
+        <node id="after the burial"/>
+        <node id="haunted shores"/>
+        <node id="destiny potato"/>
+        <node id="algorithm"/>
+        <node id="elitist"/>
+        <node id="david maxim micic"/>
+        <node id="circles"/>
+        <node id="circle of contempt"/>
+        <node id="hacktivist"/>
+        <node id="corelia"/>
+        <node id="ion dissonance"/>
+        <node id="erra"/>
+        <node id="anger"/>
+        <node id="anticipation"/>
+        <node id="disgust"/>
+        <node id="fear"/>
+        <node id="joy"/>
+        <node id="sadness"/>
+        <node id="surprise"/>
+        <node id="trust"/>
+        <edge directed="false" source="anger" target="Kendrick Lamar">
+            <data key="weight">0.3926960665831538</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Kendrick Lamar">
+            <data key="weight">0.3490245057890149</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Kendrick Lamar">
+            <data key="weight">0.2796023832517183</data>
+        </edge>
+        <edge directed="false" source="fear" target="Kendrick Lamar">
+            <data key="weight">0.413922880993054</data>
+        </edge>
+        <edge directed="false" source="joy" target="Kendrick Lamar">
+            <data key="weight">0.3490245057890149</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Kendrick Lamar">
+            <data key="weight">0.39304404714725055</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Kendrick Lamar">
+            <data key="weight">0.18234181558668375</data>
+        </edge>
+        <edge directed="false" source="trust" target="Kendrick Lamar">
+            <data key="weight">0.40609331830087775</data>
+        </edge>
+        <edge directed="false" source="anger" target="Gorillaz">
+            <data key="weight">0.21602951728285397</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Gorillaz">
+            <data key="weight">0.5044053682351995</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Gorillaz">
+            <data key="weight">0.1376262812596375</data>
+        </edge>
+        <edge directed="false" source="fear" target="Gorillaz">
+            <data key="weight">0.3348121023309029</data>
+        </edge>
+        <edge directed="false" source="joy" target="Gorillaz">
+            <data key="weight">0.46806395411285023</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Gorillaz">
+            <data key="weight">0.3253902542251087</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Gorillaz">
+            <data key="weight">0.22376889251261353</data>
+        </edge>
+        <edge directed="false" source="trust" target="Gorillaz">
+            <data key="weight">0.4391254206450536</data>
+        </edge>
+        <edge directed="false" source="anger" target="Ed Sheeran">
+            <data key="weight">0.20439947206387393</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Ed Sheeran">
+            <data key="weight">0.3749304269543734</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Ed Sheeran">
+            <data key="weight">0.1461693899061424</data>
+        </edge>
+        <edge directed="false" source="fear" target="Ed Sheeran">
+            <data key="weight">0.3487863084345756</data>
+        </edge>
+        <edge directed="false" source="joy" target="Ed Sheeran">
+            <data key="weight">0.5632869171992805</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Ed Sheeran">
+            <data key="weight">0.4004803609623576</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Ed Sheeran">
+            <data key="weight">0.1782553535440761</data>
+        </edge>
+        <edge directed="false" source="trust" target="Ed Sheeran">
+            <data key="weight">0.4064222060804935</data>
+        </edge>
+        <edge directed="false" source="anger" target="Bruno Mars">
+            <data key="weight">0.24316589234600974</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Bruno Mars">
+            <data key="weight">0.4375960045804774</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Bruno Mars">
+            <data key="weight">0.1667276688026438</data>
+        </edge>
+        <edge directed="false" source="fear" target="Bruno Mars">
+            <data key="weight">0.3493585921680013</data>
+        </edge>
+        <edge directed="false" source="joy" target="Bruno Mars">
+            <data key="weight">0.5278854498397553</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Bruno Mars">
+            <data key="weight">0.3442285100509969</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Bruno Mars">
+            <data key="weight">0.2575301222736221</data>
+        </edge>
+        <edge directed="false" source="trust" target="Bruno Mars">
+            <data key="weight">0.3688529042126181</data>
+        </edge>
+        <edge directed="false" source="anger" target="Drake">
+            <data key="weight">0.388713938349985</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Drake">
+            <data key="weight">0.42677821019046036</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Drake">
+            <data key="weight">0.26286269401877993</data>
+        </edge>
+        <edge directed="false" source="fear" target="Drake">
+            <data key="weight">0.31776691858449174</data>
+        </edge>
+        <edge directed="false" source="joy" target="Drake">
+            <data key="weight">0.40326206318953844</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Drake">
+            <data key="weight">0.3055106216306214</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Drake">
+            <data key="weight">0.24432878155195162</data>
+        </edge>
+        <edge directed="false" source="trust" target="Drake">
+            <data key="weight">0.425482829211596</data>
+        </edge>
+        <edge directed="false" source="anger" target="Mary J. Blige">
+            <data key="weight">0.18236256969814638</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Mary J. Blige">
+            <data key="weight">0.3857089119029503</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Mary J. Blige">
+            <data key="weight">0.15534030150611972</data>
+        </edge>
+        <edge directed="false" source="fear" target="Mary J. Blige">
+            <data key="weight">0.2841112219966154</data>
+        </edge>
+        <edge directed="false" source="joy" target="Mary J. Blige">
+            <data key="weight">0.6556296690389484</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Mary J. Blige">
+            <data key="weight">0.30796327995382333</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Mary J. Blige">
+            <data key="weight">0.18507989275656245</data>
+        </edge>
+        <edge directed="false" source="trust" target="Mary J. Blige">
+            <data key="weight">0.39265318194112475</data>
+        </edge>
+        <edge directed="false" source="anger" target="The Chainsmokers">
+            <data key="weight">0.18919399176482934</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="The Chainsmokers">
+            <data key="weight">0.34568778742215733</data>
+        </edge>
+        <edge directed="false" source="disgust" target="The Chainsmokers">
+            <data key="weight">0.13780796931018433</data>
+        </edge>
+        <edge directed="false" source="fear" target="The Chainsmokers">
+            <data key="weight">0.3970738098768023</data>
+        </edge>
+        <edge directed="false" source="joy" target="The Chainsmokers">
+            <data key="weight">0.516195952839843</data>
+        </edge>
+        <edge directed="false" source="sadness" target="The Chainsmokers">
+            <data key="weight">0.4017452664635882</data>
+        </edge>
+        <edge directed="false" source="surprise" target="The Chainsmokers">
+            <data key="weight">0.23123710104590253</data>
+        </edge>
+        <edge directed="false" source="trust" target="The Chainsmokers">
+            <data key="weight">0.4321097342776966</data>
+        </edge>
+        <edge directed="false" source="anger" target="DJ Khaled">
+            <data key="weight">0.4151780757802113</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="DJ Khaled">
+            <data key="weight">0.38330685239314255</data>
+        </edge>
+        <edge directed="false" source="disgust" target="DJ Khaled">
+            <data key="weight">0.30235053630299463</data>
+        </edge>
+        <edge directed="false" source="fear" target="DJ Khaled">
+            <data key="weight">0.39012422637968136</data>
+        </edge>
+        <edge directed="false" source="joy" target="DJ Khaled">
+            <data key="weight">0.36166168998588194</data>
+        </edge>
+        <edge directed="false" source="sadness" target="DJ Khaled">
+            <data key="weight">0.2897383944278979</data>
+        </edge>
+        <edge directed="false" source="surprise" target="DJ Khaled">
+            <data key="weight">0.22258726066049098</data>
+        </edge>
+        <edge directed="false" source="trust" target="DJ Khaled">
+            <data key="weight">0.41568937882920176</data>
+        </edge>
+        <edge directed="false" source="anger" target="Future">
+            <data key="weight">0.4585136642582592</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Future">
+            <data key="weight">0.3808202214820098</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Future">
+            <data key="weight">0.2875269142113166</data>
+        </edge>
+        <edge directed="false" source="fear" target="Future">
+            <data key="weight">0.39993770248010263</data>
+        </edge>
+        <edge directed="false" source="joy" target="Future">
+            <data key="weight">0.3505381315810307</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Future">
+            <data key="weight">0.2921151096508589</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Future">
+            <data key="weight">0.21105699021894517</data>
+        </edge>
+        <edge directed="false" source="trust" target="Future">
+            <data key="weight">0.3864789958574453</data>
+        </edge>
+        <edge directed="false" source="anger" target="The Weeknd">
+            <data key="weight">0.24587576282802132</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="The Weeknd">
+            <data key="weight">0.4140794750555589</data>
+        </edge>
+        <edge directed="false" source="disgust" target="The Weeknd">
+            <data key="weight">0.18209209213623337</data>
+        </edge>
+        <edge directed="false" source="fear" target="The Weeknd">
+            <data key="weight">0.30605874243236963</data>
+        </edge>
+        <edge directed="false" source="joy" target="The Weeknd">
+            <data key="weight">0.5797112650777825</data>
+        </edge>
+        <edge directed="false" source="sadness" target="The Weeknd">
+            <data key="weight">0.3430944221888917</data>
+        </edge>
+        <edge directed="false" source="surprise" target="The Weeknd">
+            <data key="weight">0.23095861403719994</data>
+        </edge>
+        <edge directed="false" source="trust" target="The Weeknd">
+            <data key="weight">0.36624172203671795</data>
+        </edge>
+        <edge directed="false" source="anger" target="Justin Bieber">
+            <data key="weight">0.22716879765556255</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Justin Bieber">
+            <data key="weight">0.39404929607011396</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Justin Bieber">
+            <data key="weight">0.13673634879404586</data>
+        </edge>
+        <edge directed="false" source="fear" target="Justin Bieber">
+            <data key="weight">0.3399762854106504</data>
+        </edge>
+        <edge directed="false" source="joy" target="Justin Bieber">
+            <data key="weight">0.6342701997469263</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Justin Bieber">
+            <data key="weight">0.33096411696740646</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Justin Bieber">
+            <data key="weight">0.1967138836059796</data>
+        </edge>
+        <edge directed="false" source="trust" target="Justin Bieber">
+            <data key="weight">0.32909953039294215</data>
+        </edge>
+        <edge directed="false" source="anger" target="Shawn Mendes">
+            <data key="weight">0.2526143441305687</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Shawn Mendes">
+            <data key="weight">0.36635692839878287</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Shawn Mendes">
+            <data key="weight">0.17854940553731297</data>
+        </edge>
+        <edge directed="false" source="fear" target="Shawn Mendes">
+            <data key="weight">0.46158327801868315</data>
+        </edge>
+        <edge directed="false" source="joy" target="Shawn Mendes">
+            <data key="weight">0.4457122197486998</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Shawn Mendes">
+            <data key="weight">0.4867124536128235</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Shawn Mendes">
+            <data key="weight">0.18780752286146993</data>
+        </edge>
+        <edge directed="false" source="trust" target="Shawn Mendes">
+            <data key="weight">0.2936145779946924</data>
+        </edge>
+        <edge directed="false" source="anger" target="Imagine Dragons">
+            <data key="weight">0.2725285422506621</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Imagine Dragons">
+            <data key="weight">0.41956284167799524</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Imagine Dragons">
+            <data key="weight">0.14516125102698496</data>
+        </edge>
+        <edge directed="false" source="fear" target="Imagine Dragons">
+            <data key="weight">0.4504681402837404</data>
+        </edge>
+        <edge directed="false" source="joy" target="Imagine Dragons">
+            <data key="weight">0.2931320746544922</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Imagine Dragons">
+            <data key="weight">0.5207074552967976</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Imagine Dragons">
+            <data key="weight">0.22757538064230542</data>
+        </edge>
+        <edge directed="false" source="trust" target="Imagine Dragons">
+            <data key="weight">0.3418313330635452</data>
+        </edge>
+        <edge directed="false" source="anger" target="Rihanna">
+            <data key="weight">0.27205044852838706</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Rihanna">
+            <data key="weight">0.33909834275790085</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Rihanna">
+            <data key="weight">0.2739798843335529</data>
+        </edge>
+        <edge directed="false" source="fear" target="Rihanna">
+            <data key="weight">0.3429572143682326</data>
+        </edge>
+        <edge directed="false" source="joy" target="Rihanna">
+            <data key="weight">0.571916929914582</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Rihanna">
+            <data key="weight">0.4034128695967631</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Rihanna">
+            <data key="weight">0.19808874266369553</data>
+        </edge>
+        <edge directed="false" source="trust" target="Rihanna">
+            <data key="weight">0.2987409771665149</data>
+        </edge>
+        <edge directed="false" source="anger" target="Migos">
+            <data key="weight">0.45940920745880387</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Migos">
+            <data key="weight">0.41378843250209335</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Migos">
+            <data key="weight">0.2917328503810697</data>
+        </edge>
+        <edge directed="false" source="fear" target="Migos">
+            <data key="weight">0.41378843250209335</data>
+        </edge>
+        <edge directed="false" source="joy" target="Migos">
+            <data key="weight">0.3241476115345219</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Migos">
+            <data key="weight">0.26652136948394023</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Migos">
+            <data key="weight">0.21209658532505754</data>
+        </edge>
+        <edge directed="false" source="trust" target="Migos">
+            <data key="weight">0.37457057332878085</data>
+        </edge>
+        <edge directed="false" source="anger" target="Sam Hunt">
+            <data key="weight">0.19645486194855738</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Sam Hunt">
+            <data key="weight">0.37364944331392286</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Sam Hunt">
+            <data key="weight">0.15793430078217358</data>
+        </edge>
+        <edge directed="false" source="fear" target="Sam Hunt">
+            <data key="weight">0.37364944331392286</data>
+        </edge>
+        <edge directed="false" source="joy" target="Sam Hunt">
+            <data key="weight">0.43913439729677534</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Sam Hunt">
+            <data key="weight">0.43913439729677534</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Sam Hunt">
+            <data key="weight">0.3466850504974542</data>
+        </edge>
+        <edge directed="false" source="trust" target="Sam Hunt">
+            <data key="weight">0.38905766778047635</data>
+        </edge>
+        <edge directed="false" source="anger" target="Willie Nelson">
+            <data key="weight">0.1914593592674794</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Willie Nelson">
+            <data key="weight">0.462139257805293</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Willie Nelson">
+            <data key="weight">0.16077452594185657</data>
+        </edge>
+        <edge directed="false" source="fear" target="Willie Nelson">
+            <data key="weight">0.2828138250239915</data>
+        </edge>
+        <edge directed="false" source="joy" target="Willie Nelson">
+            <data key="weight">0.5487101563893697</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Willie Nelson">
+            <data key="weight">0.36716794857693946</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Willie Nelson">
+            <data key="weight">0.23217801641821084</data>
+        </edge>
+        <edge directed="false" source="trust" target="Willie Nelson">
+            <data key="weight">0.3926025252498892</data>
+        </edge>
+        <edge directed="false" source="anger" target="Alessia Cara">
+            <data key="weight">0.2559948063218028</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Alessia Cara">
+            <data key="weight">0.4338895022403438</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Alessia Cara">
+            <data key="weight">0.18223359094094438</data>
+        </edge>
+        <edge directed="false" source="fear" target="Alessia Cara">
+            <data key="weight">0.36446718188188876</data>
+        </edge>
+        <edge directed="false" source="joy" target="Alessia Cara">
+            <data key="weight">0.5423618778004297</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Alessia Cara">
+            <data key="weight">0.35578939183708186</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Alessia Cara">
+            <data key="weight">0.26901149138901315</data>
+        </edge>
+        <edge directed="false" source="trust" target="Alessia Cara">
+            <data key="weight">0.29504486152343373</data>
+        </edge>
+        <edge directed="false" source="anger" target="Lil Uzi Vert">
+            <data key="weight">0.5196251554361726</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Lil Uzi Vert">
+            <data key="weight">0.28681818615473326</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Lil Uzi Vert">
+            <data key="weight">0.3389669472737757</data>
+        </edge>
+        <edge directed="false" source="fear" target="Lil Uzi Vert">
+            <data key="weight">0.3662829650027979</data>
+        </edge>
+        <edge directed="false" source="joy" target="Lil Uzi Vert">
+            <data key="weight">0.33772531010427465</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Lil Uzi Vert">
+            <data key="weight">0.3166174782227575</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Lil Uzi Vert">
+            <data key="weight">0.21356159315417367</data>
+        </edge>
+        <edge directed="false" source="trust" target="Lil Uzi Vert">
+            <data key="weight">0.37249115085030293</data>
+        </edge>
+        <edge directed="false" source="anger" target="Selena Gomez">
+            <data key="weight">0.21687049007947717</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Selena Gomez">
+            <data key="weight">0.37139071426110465</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Selena Gomez">
+            <data key="weight">0.22681038754145322</data>
+        </edge>
+        <edge directed="false" source="fear" target="Selena Gomez">
+            <data key="weight">0.33343837849719615</data>
+        </edge>
+        <edge directed="false" source="joy" target="Selena Gomez">
+            <data key="weight">0.5304290736527213</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Selena Gomez">
+            <data key="weight">0.37048708721910684</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Selena Gomez">
+            <data key="weight">0.2828352641453182</data>
+        </edge>
+        <edge directed="false" source="trust" target="Selena Gomez">
+            <data key="weight">0.39217413622705455</data>
+        </edge>
+        <edge directed="false" source="anger" target="Harry Styles">
+            <data key="weight">0.12331952185407494</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Harry Styles">
+            <data key="weight">0.4503843406844476</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Harry Styles">
+            <data key="weight">0.1125960851711119</data>
+        </edge>
+        <edge directed="false" source="fear" target="Harry Styles">
+            <data key="weight">0.2841710720985205</data>
+        </edge>
+        <edge directed="false" source="joy" target="Harry Styles">
+            <data key="weight">0.5254483974651889</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Harry Styles">
+            <data key="weight">0.2734476354155575</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Harry Styles">
+            <data key="weight">0.38604372058666936</data>
+        </edge>
+        <edge directed="false" source="trust" target="Harry Styles">
+            <data key="weight">0.43429918566000303</data>
+        </edge>
+        <edge directed="false" source="anger" target="James Arthur">
+            <data key="weight">0.28805769380714086</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="James Arthur">
+            <data key="weight">0.3424833410241582</data>
+        </edge>
+        <edge directed="false" source="disgust" target="James Arthur">
+            <data key="weight">0.19779076671550225</data>
+        </edge>
+        <edge directed="false" source="fear" target="James Arthur">
+            <data key="weight">0.4022188074818603</data>
+        </edge>
+        <edge directed="false" source="joy" target="James Arthur">
+            <data key="weight">0.4261129940649411</data>
+        </edge>
+        <edge directed="false" source="sadness" target="James Arthur">
+            <data key="weight">0.48053864128195845</data>
+        </edge>
+        <edge directed="false" source="surprise" target="James Arthur">
+            <data key="weight">0.20044567633584456</data>
+        </edge>
+        <edge directed="false" source="trust" target="James Arthur">
+            <data key="weight">0.3823069853292929</data>
+        </edge>
+        <edge directed="false" source="anger" target="Adele">
+            <data key="weight">0.21468558809410698</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Adele">
+            <data key="weight">0.3866927159044457</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Adele">
+            <data key="weight">0.18235342121246437</data>
+        </edge>
+        <edge directed="false" source="fear" target="Adele">
+            <data key="weight">0.30262908201217487</data>
+        </edge>
+        <edge directed="false" source="joy" target="Adele">
+            <data key="weight">0.6104313107254126</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Adele">
+            <data key="weight">0.3595336957238659</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Adele">
+            <data key="weight">0.23020502819729544</data>
+        </edge>
+        <edge directed="false" source="trust" target="Adele">
+            <data key="weight">0.3530672623475374</data>
+        </edge>
+        <edge directed="false" source="anger" target="Maroon 5">
+            <data key="weight">0.30891953848785403</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Maroon 5">
+            <data key="weight">0.37168983658407984</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Maroon 5">
+            <data key="weight">0.19907151681945892</data>
+        </edge>
+        <edge directed="false" source="fear" target="Maroon 5">
+            <data key="weight">0.3793119442100501</data>
+        </edge>
+        <edge directed="false" source="joy" target="Maroon 5">
+            <data key="weight">0.47974442116401134</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Maroon 5">
+            <data key="weight">0.4402888052178123</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Maroon 5">
+            <data key="weight">0.21476409134351535</data>
+        </edge>
+        <edge directed="false" source="trust" target="Maroon 5">
+            <data key="weight">0.33582109481480793</data>
+        </edge>
+        <edge directed="false" source="anger" target="Julia Michaels">
+            <data key="weight">0.41695392396839687</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Julia Michaels">
+            <data key="weight">0.15161960871578067</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Julia Michaels">
+            <data key="weight">0.41695392396839687</data>
+        </edge>
+        <edge directed="false" source="fear" target="Julia Michaels">
+            <data key="weight">0.30323921743156135</data>
+        </edge>
+        <edge directed="false" source="joy" target="Julia Michaels">
+            <data key="weight">0.5685735326841775</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Julia Michaels">
+            <data key="weight">0.3411441196105065</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Julia Michaels">
+            <data key="weight">0.07580980435789034</data>
+        </edge>
+        <edge directed="false" source="trust" target="Julia Michaels">
+            <data key="weight">0.30323921743156135</data>
+        </edge>
+        <edge directed="false" source="anger" target="Metallica">
+            <data key="weight">0.4007706431688935</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Metallica">
+            <data key="weight">0.31901239704793133</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Metallica">
+            <data key="weight">0.2595048128459652</data>
+        </edge>
+        <edge directed="false" source="fear" target="Metallica">
+            <data key="weight">0.5234080123503366</data>
+        </edge>
+        <edge directed="false" source="joy" target="Metallica">
+            <data key="weight">0.27761581673352015</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Metallica">
+            <data key="weight">0.4375101081979334</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Metallica">
+            <data key="weight">0.19430519885076758</data>
+        </edge>
+        <edge directed="false" source="trust" target="Metallica">
+            <data key="weight">0.3001252072794812</data>
+        </edge>
+        <edge directed="false" source="anger" target="twenty one pilots">
+            <data key="weight">0.27087048668229746</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="twenty one pilots">
+            <data key="weight">0.4113218501471924</data>
+        </edge>
+        <edge directed="false" source="disgust" target="twenty one pilots">
+            <data key="weight">0.19663190885085297</data>
+        </edge>
+        <edge directed="false" source="fear" target="twenty one pilots">
+            <data key="weight">0.41433152222144015</data>
+        </edge>
+        <edge directed="false" source="joy" target="twenty one pilots">
+            <data key="weight">0.3661767690334762</data>
+        </edge>
+        <edge directed="false" source="sadness" target="twenty one pilots">
+            <data key="weight">0.45646693126090865</data>
+        </edge>
+        <edge directed="false" source="surprise" target="twenty one pilots">
+            <data key="weight">0.21268349324684094</data>
+        </edge>
+        <edge directed="false" source="trust" target="twenty one pilots">
+            <data key="weight">0.3992831618502014</data>
+        </edge>
+        <edge directed="false" source="anger" target="Lady Gaga">
+            <data key="weight">0.23927523220665659</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Lady Gaga">
+            <data key="weight">0.3139769137313092</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Lady Gaga">
+            <data key="weight">0.24686032602300592</data>
+        </edge>
+        <edge directed="false" source="fear" target="Lady Gaga">
+            <data key="weight">0.3263888854307899</data>
+        </edge>
+        <edge directed="false" source="joy" target="Lady Gaga">
+            <data key="weight">0.6205985849740372</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Lady Gaga">
+            <data key="weight">0.3162754270089908</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Lady Gaga">
+            <data key="weight">0.23031103042369827</data>
+        </edge>
+        <edge directed="false" source="trust" target="Lady Gaga">
+            <data key="weight">0.3721292996566542</data>
+        </edge>
+        <edge directed="false" source="anger" target="John Mellencamp">
+            <data key="weight">0.2565051318766218</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="John Mellencamp">
+            <data key="weight">0.4340656974340007</data>
+        </edge>
+        <edge directed="false" source="disgust" target="John Mellencamp">
+            <data key="weight">0.1747133844770128</data>
+        </edge>
+        <edge directed="false" source="fear" target="John Mellencamp">
+            <data key="weight">0.3157782652769713</data>
+        </edge>
+        <edge directed="false" source="joy" target="John Mellencamp">
+            <data key="weight">0.5003273662134308</data>
+        </edge>
+        <edge directed="false" source="sadness" target="John Mellencamp">
+            <data key="weight">0.32354330458706076</data>
+        </edge>
+        <edge directed="false" source="surprise" target="John Mellencamp">
+            <data key="weight">0.26815269084175597</data>
+        </edge>
+        <edge directed="false" source="trust" target="John Mellencamp">
+            <data key="weight">0.43432453207767036</data>
+        </edge>
+        <edge directed="false" source="anger" target="Keith Urban">
+            <data key="weight">0.1766777068535866</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Keith Urban">
+            <data key="weight">0.4204126342629663</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Keith Urban">
+            <data key="weight">0.13853138378292587</data>
+        </edge>
+        <edge directed="false" source="fear" target="Keith Urban">
+            <data key="weight">0.2951320784940594</data>
+        </edge>
+        <edge directed="false" source="joy" target="Keith Urban">
+            <data key="weight">0.5958857203880057</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Keith Urban">
+            <data key="weight">0.33849842472175795</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Keith Urban">
+            <data key="weight">0.25859191639479495</data>
+        </edge>
+        <edge directed="false" source="trust" target="Keith Urban">
+            <data key="weight">0.38628171362079616</data>
+        </edge>
+        <edge directed="false" source="anger" target="Coldplay">
+            <data key="weight">0.23175815638260477</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Coldplay">
+            <data key="weight">0.45599613659940236</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Coldplay">
+            <data key="weight">0.15382178520969345</data>
+        </edge>
+        <edge directed="false" source="fear" target="Coldplay">
+            <data key="weight">0.41360968911939794</data>
+        </edge>
+        <edge directed="false" source="joy" target="Coldplay">
+            <data key="weight">0.4512105699484341</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Coldplay">
+            <data key="weight">0.3937837701368152</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Coldplay">
+            <data key="weight">0.23380911351873404</data>
+        </edge>
+        <edge directed="false" source="trust" target="Coldplay">
+            <data key="weight">0.36096845595874727</data>
+        </edge>
+        <edge directed="false" source="anger" target="Niall Horan">
+            <data key="weight">0.22391801125862276</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Niall Horan">
+            <data key="weight">0.37319668543103796</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Niall Horan">
+            <data key="weight">0.2985573483448304</data>
+        </edge>
+        <edge directed="false" source="fear" target="Niall Horan">
+            <data key="weight">0.4478360225172455</data>
+        </edge>
+        <edge directed="false" source="joy" target="Niall Horan">
+            <data key="weight">0.4478360225172455</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Niall Horan">
+            <data key="weight">0.18659834271551898</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Niall Horan">
+            <data key="weight">0.22391801125862276</data>
+        </edge>
+        <edge directed="false" source="trust" target="Niall Horan">
+            <data key="weight">0.48515569106034934</data>
+        </edge>
+        <edge directed="false" source="anger" target="Halsey">
+            <data key="weight">0.20627889598430596</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Halsey">
+            <data key="weight">0.47189829629286434</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Halsey">
+            <data key="weight">0.18649872787622185</data>
+        </edge>
+        <edge directed="false" source="fear" target="Halsey">
+            <data key="weight">0.38712614725821803</data>
+        </edge>
+        <edge directed="false" source="joy" target="Halsey">
+            <data key="weight">0.4266864834743863</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Halsey">
+            <data key="weight">0.45776960478708995</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Halsey">
+            <data key="weight">0.18367298957506695</data>
+        </edge>
+        <edge directed="false" source="trust" target="Halsey">
+            <data key="weight">0.35321728764435956</data>
+        </edge>
+        <edge directed="false" source="anger" target="Post Malone">
+            <data key="weight">0.4143211768269744</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Post Malone">
+            <data key="weight">0.4237805644257638</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Post Malone">
+            <data key="weight">0.24972783260803938</data>
+        </edge>
+        <edge directed="false" source="fear" target="Post Malone">
+            <data key="weight">0.40675366674794294</data>
+        </edge>
+        <edge directed="false" source="joy" target="Post Malone">
+            <data key="weight">0.3613486062737539</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Post Malone">
+            <data key="weight">0.38215925899109054</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Post Malone">
+            <data key="weight">0.2270253023709449</data>
+        </edge>
+        <edge directed="false" source="trust" target="Post Malone">
+            <data key="weight">0.30459228068101774</data>
+        </edge>
+        <edge directed="false" source="anger" target="Kodak Black">
+            <data key="weight">0.4166666666666667</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Kodak Black">
+            <data key="weight">0.26666666666666666</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Kodak Black">
+            <data key="weight">0.36666666666666664</data>
+        </edge>
+        <edge directed="false" source="fear" target="Kodak Black">
+            <data key="weight">0.5166666666666667</data>
+        </edge>
+        <edge directed="false" source="joy" target="Kodak Black">
+            <data key="weight">0.38333333333333336</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Kodak Black">
+            <data key="weight">0.4</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Kodak Black">
+            <data key="weight">0.08333333333333333</data>
+        </edge>
+        <edge directed="false" source="trust" target="Kodak Black">
+            <data key="weight">0.2</data>
+        </edge>
+        <edge directed="false" source="anger" target="Brett Young">
+            <data key="weight">0.27293240797457363</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Brett Young">
+            <data key="weight">0.5789475320672773</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Brett Young">
+            <data key="weight">0.1488722225315856</data>
+        </edge>
+        <edge directed="false" source="fear" target="Brett Young">
+            <data key="weight">0.33082716118130134</data>
+        </edge>
+        <edge directed="false" source="joy" target="Brett Young">
+            <data key="weight">0.4218046305061592</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Brett Young">
+            <data key="weight">0.372180556328964</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Brett Young">
+            <data key="weight">0.23157901282691093</data>
+        </edge>
+        <edge directed="false" source="trust" target="Brett Young">
+            <data key="weight">0.2977444450631712</data>
+        </edge>
+        <edge directed="false" source="anger" target="Katy Perry">
+            <data key="weight">0.249147952315884</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Katy Perry">
+            <data key="weight">0.44490705770693567</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Katy Perry">
+            <data key="weight">0.16820357149436407</data>
+        </edge>
+        <edge directed="false" source="fear" target="Katy Perry">
+            <data key="weight">0.35592564616554856</data>
+        </edge>
+        <edge directed="false" source="joy" target="Katy Perry">
+            <data key="weight">0.520110702299979</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Katy Perry">
+            <data key="weight">0.3295182595145562</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Katy Perry">
+            <data key="weight">0.2416849952188644</data>
+        </edge>
+        <edge directed="false" source="trust" target="Katy Perry">
+            <data key="weight">0.3840552536850838</data>
+        </edge>
+        <edge directed="false" source="anger" target="Khalid">
+            <data key="weight">0.20582392918390904</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Khalid">
+            <data key="weight">0.4010017930652021</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Khalid">
+            <data key="weight">0.10646065302615985</data>
+        </edge>
+        <edge directed="false" source="fear" target="Khalid">
+            <data key="weight">0.2129213060523197</data>
+        </edge>
+        <edge directed="false" source="joy" target="Khalid">
+            <data key="weight">0.6494099834595751</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Khalid">
+            <data key="weight">0.2732490094338103</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Khalid">
+            <data key="weight">0.20937261761811438</data>
+        </edge>
+        <edge directed="false" source="trust" target="Khalid">
+            <data key="weight">0.4471347427098714</data>
+        </edge>
+        <edge directed="false" source="anger" target="Kygo">
+            <data key="weight">0.3257251710995966</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Kygo">
+            <data key="weight">0.2035782319372479</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Kygo">
+            <data key="weight">0.22167407477611437</data>
+        </edge>
+        <edge directed="false" source="fear" target="Kygo">
+            <data key="weight">0.4388241888425121</data>
+        </edge>
+        <edge directed="false" source="joy" target="Kygo">
+            <data key="weight">0.6333544993603267</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Kygo">
+            <data key="weight">0.3257251710995966</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Kygo">
+            <data key="weight">0.14929070342064846</data>
+        </edge>
+        <edge directed="false" source="trust" target="Kygo">
+            <data key="weight">0.285009524712147</data>
+        </edge>
+        <edge directed="false" source="anger" target="Travis Scott">
+            <data key="weight">0.41557241795360755</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Travis Scott">
+            <data key="weight">0.341897529452137</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Travis Scott">
+            <data key="weight">0.32693231772527576</data>
+        </edge>
+        <edge directed="false" source="fear" target="Travis Scott">
+            <data key="weight">0.37815938863645454</data>
+        </edge>
+        <edge directed="false" source="joy" target="Travis Scott">
+            <data key="weight">0.3206008819946806</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Travis Scott">
+            <data key="weight">0.3735547081051126</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Travis Scott">
+            <data key="weight">0.24117014282903262</data>
+        </edge>
+        <edge directed="false" source="trust" target="Travis Scott">
+            <data key="weight">0.4000316211603286</data>
+        </edge>
+        <edge directed="false" source="anger" target="Chris Stapleton">
+            <data key="weight">0.32089959570117516</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Chris Stapleton">
+            <data key="weight">0.37394085118897274</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Chris Stapleton">
+            <data key="weight">0.25194596356703836</data>
+        </edge>
+        <edge directed="false" source="fear" target="Chris Stapleton">
+            <data key="weight">0.3872011650609221</data>
+        </edge>
+        <edge directed="false" source="joy" target="Chris Stapleton">
+            <data key="weight">0.4349382949999399</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Chris Stapleton">
+            <data key="weight">0.4375903577743298</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Chris Stapleton">
+            <data key="weight">0.23072946137191935</data>
+        </edge>
+        <edge directed="false" source="trust" target="Chris Stapleton">
+            <data key="weight">0.3315078467987347</data>
+        </edge>
+        <edge directed="false" source="anger" target="Daddy Yankee">
+            <data key="weight">0.4983588033039771</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Daddy Yankee">
+            <data key="weight">0.5817576234487243</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Daddy Yankee">
+            <data key="weight">0.08136470258024116</data>
+        </edge>
+        <edge directed="false" source="fear" target="Daddy Yankee">
+            <data key="weight">0.5329388019005796</data>
+        </edge>
+        <edge directed="false" source="joy" target="Daddy Yankee">
+            <data key="weight">0.2176505794021451</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Daddy Yankee">
+            <data key="weight">0.15255881733795218</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Daddy Yankee">
+            <data key="weight">0.08950117283826528</data>
+        </edge>
+        <edge directed="false" source="trust" target="Daddy Yankee">
+            <data key="weight">0.209514109144121</data>
+        </edge>
+        <edge directed="false" source="anger" target="Luis Fonsi">
+            <data key="weight">0.26649948172944565</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Luis Fonsi">
+            <data key="weight">0.275533362466037</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Luis Fonsi">
+            <data key="weight">0.1219573899439836</data>
+        </edge>
+        <edge directed="false" source="fear" target="Luis Fonsi">
+            <data key="weight">0.347804408358768</data>
+        </edge>
+        <edge directed="false" source="joy" target="Luis Fonsi">
+            <data key="weight">0.5826853075101438</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Luis Fonsi">
+            <data key="weight">0.41555851388320336</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Luis Fonsi">
+            <data key="weight">0.21681313767819307</data>
+        </edge>
+        <edge directed="false" source="trust" target="Luis Fonsi">
+            <data key="weight">0.39749075241002063</data>
+        </edge>
+        <edge directed="false" source="anger" target="Big Sean">
+            <data key="weight">0.40446009340477157</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Big Sean">
+            <data key="weight">0.4049912294433859</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Big Sean">
+            <data key="weight">0.3085900384348947</data>
+        </edge>
+        <edge directed="false" source="fear" target="Big Sean">
+            <data key="weight">0.3699362508948436</data>
+        </edge>
+        <edge directed="false" source="joy" target="Big Sean">
+            <data key="weight">0.3598446661611724</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Big Sean">
+            <data key="weight">0.3425827449062084</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Big Sean">
+            <data key="weight">0.2177657758318534</data>
+        </edge>
+        <edge directed="false" source="trust" target="Big Sean">
+            <data key="weight">0.382152379782972</data>
+        </edge>
+        <edge directed="false" source="anger" target="Florida Georgia Line">
+            <data key="weight">0.20437555657298279</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Florida Georgia Line">
+            <data key="weight">0.41781897060483514</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Florida Georgia Line">
+            <data key="weight">0.14369066434824046</data>
+        </edge>
+        <edge directed="false" source="fear" target="Florida Georgia Line">
+            <data key="weight">0.30830715360156447</data>
+        </edge>
+        <edge directed="false" source="joy" target="Florida Georgia Line">
+            <data key="weight">0.592898372310701</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Florida Georgia Line">
+            <data key="weight">0.29993682363953106</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Florida Georgia Line">
+            <data key="weight">0.2413445139052971</data>
+        </edge>
+        <edge directed="false" source="trust" target="Florida Georgia Line">
+            <data key="weight">0.41014616813963783</data>
+        </edge>
+        <edge directed="false" source="anger" target="Taylor Swift">
+            <data key="weight">0.21132446184689058</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Taylor Swift">
+            <data key="weight">0.4160054900129658</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Taylor Swift">
+            <data key="weight">0.16228959420277675</data>
+        </edge>
+        <edge directed="false" source="fear" target="Taylor Swift">
+            <data key="weight">0.304965241347908</data>
+        </edge>
+        <edge directed="false" source="joy" target="Taylor Swift">
+            <data key="weight">0.5703862345957241</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Taylor Swift">
+            <data key="weight">0.3660215604144497</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Taylor Swift">
+            <data key="weight">0.25023600197738094</data>
+        </edge>
+        <edge directed="false" source="trust" target="Taylor Swift">
+            <data key="weight">0.37551217995847175</data>
+        </edge>
+        <edge directed="false" source="anger" target="Justin Timberlake">
+            <data key="weight">0.23218481920994138</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Justin Timberlake">
+            <data key="weight">0.3563532225265622</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Justin Timberlake">
+            <data key="weight">0.16488487161285692</data>
+        </edge>
+        <edge directed="false" source="fear" target="Justin Timberlake">
+            <data key="weight">0.26785379143639615</data>
+        </edge>
+        <edge directed="false" source="joy" target="Justin Timberlake">
+            <data key="weight">0.6450699977180545</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Justin Timberlake">
+            <data key="weight">0.3489502282908829</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Justin Timberlake">
+            <data key="weight">0.20560133990909302</data>
+        </edge>
+        <edge directed="false" source="trust" target="Justin Timberlake">
+            <data key="weight">0.37418770863978956</data>
+        </edge>
+        <edge directed="false" source="anger" target="Wale">
+            <data key="weight">0.3530081269226663</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Wale">
+            <data key="weight">0.39097594749934345</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Wale">
+            <data key="weight">0.25410658454244395</data>
+        </edge>
+        <edge directed="false" source="fear" target="Wale">
+            <data key="weight">0.3261528391976996</data>
+        </edge>
+        <edge directed="false" source="joy" target="Wale">
+            <data key="weight">0.43950067428514544</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Wale">
+            <data key="weight">0.33078306121924556</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Wale">
+            <data key="weight">0.23595611421798368</data>
+        </edge>
+        <edge directed="false" source="trust" target="Wale">
+            <data key="weight">0.43968588316600726</data>
+        </edge>
+        <edge directed="false" source="anger" target="Rae Sremmurd">
+            <data key="weight">0.4071012948668862</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Rae Sremmurd">
+            <data key="weight">0.37956787395801467</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Rae Sremmurd">
+            <data key="weight">0.24386744233571925</data>
+        </edge>
+        <edge directed="false" source="fear" target="Rae Sremmurd">
+            <data key="weight">0.35301778951017426</data>
+        </edge>
+        <edge directed="false" source="joy" target="Rae Sremmurd">
+            <data key="weight">0.3776012010359524</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Rae Sremmurd">
+            <data key="weight">0.31565100399099144</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Rae Sremmurd">
+            <data key="weight">0.30680097584171134</data>
+        </edge>
+        <edge directed="false" source="trust" target="Rae Sremmurd">
+            <data key="weight">0.4120179771720418</data>
+        </edge>
+        <edge directed="false" source="anger" target="Fall Out Boy">
+            <data key="weight">0.2568552255734004</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Fall Out Boy">
+            <data key="weight">0.3956337205847003</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Fall Out Boy">
+            <data key="weight">0.21775189272491255</data>
+        </edge>
+        <edge directed="false" source="fear" target="Fall Out Boy">
+            <data key="weight">0.3918000605015152</data>
+        </edge>
+        <edge directed="false" source="joy" target="Fall Out Boy">
+            <data key="weight">0.47537385031494994</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Fall Out Boy">
+            <data key="weight">0.38029908025195996</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Fall Out Boy">
+            <data key="weight">0.20663427848367583</data>
+        </edge>
+        <edge directed="false" source="trust" target="Fall Out Boy">
+            <data key="weight">0.40406777276770744</data>
+        </edge>
+        <edge directed="false" source="anger" target="J. Cole">
+            <data key="weight">0.4066170128057642</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="J. Cole">
+            <data key="weight">0.3899295840996453</data>
+        </edge>
+        <edge directed="false" source="disgust" target="J. Cole">
+            <data key="weight">0.3350464852439653</data>
+        </edge>
+        <edge directed="false" source="fear" target="J. Cole">
+            <data key="weight">0.36489844104046687</data>
+        </edge>
+        <edge directed="false" source="joy" target="J. Cole">
+            <data key="weight">0.3470985170872734</data>
+        </edge>
+        <edge directed="false" source="sadness" target="J. Cole">
+            <data key="weight">0.34635685358922363</data>
+        </edge>
+        <edge directed="false" source="surprise" target="J. Cole">
+            <data key="weight">0.19264709361841723</data>
+        </edge>
+        <edge directed="false" source="trust" target="J. Cole">
+            <data key="weight">0.39957120957429176</data>
+        </edge>
+        <edge directed="false" source="anger" target="Zedd">
+            <data key="weight">0.1634291224266789</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Zedd">
+            <data key="weight">0.4381795311439941</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Zedd">
+            <data key="weight">0.08289883021643132</data>
+        </edge>
+        <edge directed="false" source="fear" target="Zedd">
+            <data key="weight">0.3505436249151953</data>
+        </edge>
+        <edge directed="false" source="joy" target="Zedd">
+            <data key="weight">0.6158198816077755</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Zedd">
+            <data key="weight">0.305541402797704</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Zedd">
+            <data key="weight">0.25343356666166145</data>
+        </edge>
+        <edge directed="false" source="trust" target="Zedd">
+            <data key="weight">0.33870093488427655</data>
+        </edge>
+        <edge directed="false" source="anger" target="Eminem">
+            <data key="weight">0.4612267445250265</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Eminem">
+            <data key="weight">0.2949075104868083</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Eminem">
+            <data key="weight">0.34993996935458194</data>
+        </edge>
+        <edge directed="false" source="fear" target="Eminem">
+            <data key="weight">0.46064025295627575</data>
+        </edge>
+        <edge directed="false" source="joy" target="Eminem">
+            <data key="weight">0.26030450793051724</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Eminem">
+            <data key="weight">0.41010422944892416</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Eminem">
+            <data key="weight">0.1972077899924215</data>
+        </edge>
+        <edge directed="false" source="trust" target="Eminem">
+            <data key="weight">0.30135891774306595</data>
+        </edge>
+        <edge directed="false" source="anger" target="Clean Bandit">
+            <data key="weight">0.19000068413980595</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Clean Bandit">
+            <data key="weight">0.405826703987935</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Clean Bandit">
+            <data key="weight">0.11990334436007172</data>
+        </edge>
+        <edge directed="false" source="fear" target="Clean Bandit">
+            <data key="weight">0.33019536369927444</data>
+        </edge>
+        <edge directed="false" source="joy" target="Clean Bandit">
+            <data key="weight">0.5275747151843155</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Clean Bandit">
+            <data key="weight">0.2951466938094073</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Clean Bandit">
+            <data key="weight">0.26378735759215777</data>
+        </edge>
+        <edge directed="false" source="trust" target="Clean Bandit">
+            <data key="weight">0.49068137845813964</data>
+        </edge>
+        <edge directed="false" source="anger" target="Luke Combs">
+            <data key="weight">0.3427017577855514</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Luke Combs">
+            <data key="weight">0.5426111164937897</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Luke Combs">
+            <data key="weight">0.16183138562095484</data>
+        </edge>
+        <edge directed="false" source="fear" target="Luke Combs">
+            <data key="weight">0.42837719723193923</data>
+        </edge>
+        <edge directed="false" source="joy" target="Luke Combs">
+            <data key="weight">0.4378966905037601</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Luke Combs">
+            <data key="weight">0.24750682506734267</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Luke Combs">
+            <data key="weight">0.2094288519800592</data>
+        </edge>
+        <edge directed="false" source="trust" target="Luke Combs">
+            <data key="weight">0.2855847981546262</data>
+        </edge>
+        <edge directed="false" source="anger" target="Calvin Harris">
+            <data key="weight">0.22235660441465785</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Calvin Harris">
+            <data key="weight">0.5457843926541602</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Calvin Harris">
+            <data key="weight">0.17641515722154674</data>
+        </edge>
+        <edge directed="false" source="fear" target="Calvin Harris">
+            <data key="weight">0.36385626176944014</data>
+        </edge>
+        <edge directed="false" source="joy" target="Calvin Harris">
+            <data key="weight">0.46676510348200906</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Calvin Harris">
+            <data key="weight">0.2646227358323201</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Calvin Harris">
+            <data key="weight">0.25727210428142233</data>
+        </edge>
+        <edge directed="false" source="trust" target="Calvin Harris">
+            <data key="weight">0.367531577544889</data>
+        </edge>
+        <edge directed="false" source="anger" target="Jason Aldean">
+            <data key="weight">0.23235630246305722</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Jason Aldean">
+            <data key="weight">0.4412570791254273</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Jason Aldean">
+            <data key="weight">0.140733154804123</data>
+        </edge>
+        <edge directed="false" source="fear" target="Jason Aldean">
+            <data key="weight">0.33644019820360654</data>
+        </edge>
+        <edge directed="false" source="joy" target="Jason Aldean">
+            <data key="weight">0.5130896268900318</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Jason Aldean">
+            <data key="weight">0.33863915374742093</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Jason Aldean">
+            <data key="weight">0.26240869489518764</data>
+        </edge>
+        <edge directed="false" source="trust" target="Jason Aldean">
+            <data key="weight">0.41413662741838275</data>
+        </edge>
+        <edge directed="false" source="anger" target="Nicki Minaj">
+            <data key="weight">0.4172308401528681</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Nicki Minaj">
+            <data key="weight">0.3454320340080151</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Nicki Minaj">
+            <data key="weight">0.31099519920890967</data>
+        </edge>
+        <edge directed="false" source="fear" target="Nicki Minaj">
+            <data key="weight">0.4030040396760176</data>
+        </edge>
+        <edge directed="false" source="joy" target="Nicki Minaj">
+            <data key="weight">0.37135938067143426</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Nicki Minaj">
+            <data key="weight">0.3456979555122553</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Nicki Minaj">
+            <data key="weight">0.25302431128454683</data>
+        </edge>
+        <edge directed="false" source="trust" target="Nicki Minaj">
+            <data key="weight">0.35500520816066217</data>
+        </edge>
+        <edge directed="false" source="anger" target="Thomas Rhett">
+            <data key="weight">0.1596796800656273</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Thomas Rhett">
+            <data key="weight">0.4884319625536835</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Thomas Rhett">
+            <data key="weight">0.07514337885441284</data>
+        </edge>
+        <edge directed="false" source="fear" target="Thomas Rhett">
+            <data key="weight">0.21603721420643693</data>
+        </edge>
+        <edge directed="false" source="joy" target="Thomas Rhett">
+            <data key="weight">0.6180542910775457</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Thomas Rhett">
+            <data key="weight">0.28930200858948946</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Thomas Rhett">
+            <data key="weight">0.2404588123341211</data>
+        </edge>
+        <edge directed="false" source="trust" target="Thomas Rhett">
+            <data key="weight">0.4001384923997484</data>
+        </edge>
+        <edge directed="false" source="anger" target="Blake Shelton">
+            <data key="weight">0.2483520743866781</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Blake Shelton">
+            <data key="weight">0.474865418305816</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Blake Shelton">
+            <data key="weight">0.18537527024772496</data>
+        </edge>
+        <edge directed="false" source="fear" target="Blake Shelton">
+            <data key="weight">0.3133603883365652</data>
+        </edge>
+        <edge directed="false" source="joy" target="Blake Shelton">
+            <data key="weight">0.512956227260828</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Blake Shelton">
+            <data key="weight">0.30929736871469726</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Blake Shelton">
+            <data key="weight">0.26104901070501546</data>
+        </edge>
+        <edge directed="false" source="trust" target="Blake Shelton">
+            <data key="weight">0.39157351605752316</data>
+        </edge>
+        <edge directed="false" source="anger" target="Lea Michele">
+            <data key="weight">0.2549044727352171</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Lea Michele">
+            <data key="weight">0.4112875848427122</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Lea Michele">
+            <data key="weight">0.15951077434964506</data>
+        </edge>
+        <edge directed="false" source="fear" target="Lea Michele">
+            <data key="weight">0.40034076699518756</data>
+        </edge>
+        <edge directed="false" source="joy" target="Lea Michele">
+            <data key="weight">0.5004259587439844</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Lea Michele">
+            <data key="weight">0.3690641445736885</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Lea Michele">
+            <data key="weight">0.19547889013436892</data>
+        </edge>
+        <edge directed="false" source="trust" target="Lea Michele">
+            <data key="weight">0.3940854425108878</data>
+        </edge>
+        <edge directed="false" source="anger" target="Childish Gambino">
+            <data key="weight">0.37305286793793385</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Childish Gambino">
+            <data key="weight">0.39002384207903096</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Childish Gambino">
+            <data key="weight">0.31751149802161616</data>
+        </edge>
+        <edge directed="false" source="fear" target="Childish Gambino">
+            <data key="weight">0.33540816166131854</data>
+        </edge>
+        <edge directed="false" source="joy" target="Childish Gambino">
+            <data key="weight">0.40792050571873334</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Childish Gambino">
+            <data key="weight">0.35978465179125796</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Childish Gambino">
+            <data key="weight">0.22216547966527078</data>
+        </edge>
+        <edge directed="false" source="trust" target="Childish Gambino">
+            <data key="weight">0.38755533674941683</data>
+        </edge>
+        <edge directed="false" source="anger" target="Chris Brown">
+            <data key="weight">0.3068501666662475</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Chris Brown">
+            <data key="weight">0.37066893367416404</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Chris Brown">
+            <data key="weight">0.2150768293900075</data>
+        </edge>
+        <edge directed="false" source="fear" target="Chris Brown">
+            <data key="weight">0.3261366531304396</data>
+        </edge>
+        <edge directed="false" source="joy" target="Chris Brown">
+            <data key="weight">0.5724185842153197</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Chris Brown">
+            <data key="weight">0.3589670205385868</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Chris Brown">
+            <data key="weight">0.21811065872145344</data>
+        </edge>
+        <edge directed="false" source="trust" target="Chris Brown">
+            <data key="weight">0.3342629816968127</data>
+        </edge>
+        <edge directed="false" source="anger" target="Lil Yachty">
+            <data key="weight">0.4893578357815623</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Lil Yachty">
+            <data key="weight">0.27683671852785524</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Lil Yachty">
+            <data key="weight">0.35793030274308557</data>
+        </edge>
+        <edge directed="false" source="fear" target="Lil Yachty">
+            <data key="weight">0.42783856499759443</data>
+        </edge>
+        <edge directed="false" source="joy" target="Lil Yachty">
+            <data key="weight">0.3215780063707409</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Lil Yachty">
+            <data key="weight">0.38868993813506947</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Lil Yachty">
+            <data key="weight">0.17896515137154279</data>
+        </edge>
+        <edge directed="false" source="trust" target="Lil Yachty">
+            <data key="weight">0.29361470146893737</data>
+        </edge>
+        <edge directed="false" source="anger" target="Grateful Dead">
+            <data key="weight">0.25407238796007314</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Grateful Dead">
+            <data key="weight">0.47730361900013746</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Grateful Dead">
+            <data key="weight">0.16613837507504783</data>
+        </edge>
+        <edge directed="false" source="fear" target="Grateful Dead">
+            <data key="weight">0.32768729227509436</data>
+        </edge>
+        <edge directed="false" source="joy" target="Grateful Dead">
+            <data key="weight">0.4725305828101361</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Grateful Dead">
+            <data key="weight">0.3625671721251044</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Grateful Dead">
+            <data key="weight">0.23938612276006893</data>
+        </edge>
+        <edge directed="false" source="trust" target="Grateful Dead">
+            <data key="weight">0.40075146164511544</data>
+        </edge>
+        <edge directed="false" source="anger" target="Michael Jackson">
+            <data key="weight">0.2780333664394448</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Michael Jackson">
+            <data key="weight">0.36912910048761094</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Michael Jackson">
+            <data key="weight">0.1938272257226526</data>
+        </edge>
+        <edge directed="false" source="fear" target="Michael Jackson">
+            <data key="weight">0.36193330300817594</data>
+        </edge>
+        <edge directed="false" source="joy" target="Michael Jackson">
+            <data key="weight">0.5667838780610268</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Michael Jackson">
+            <data key="weight">0.367138773525214</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Michael Jackson">
+            <data key="weight">0.21327118912453008</data>
+        </edge>
+        <edge directed="false" source="trust" target="Michael Jackson">
+            <data key="weight">0.3411114209400237</data>
+        </edge>
+        <edge directed="false" source="anger" target="Charlie Puth">
+            <data key="weight">0.28932578716254487</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Charlie Puth">
+            <data key="weight">0.30416300701703436</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Charlie Puth">
+            <data key="weight">0.16691872336300664</data>
+        </edge>
+        <edge directed="false" source="fear" target="Charlie Puth">
+            <data key="weight">0.3152909219079015</data>
+        </edge>
+        <edge directed="false" source="joy" target="Charlie Puth">
+            <data key="weight">0.6825121133065161</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Charlie Puth">
+            <data key="weight">0.33754675168963566</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Charlie Puth">
+            <data key="weight">0.18175594321749614</data>
+        </edge>
+        <edge directed="false" source="trust" target="Charlie Puth">
+            <data key="weight">0.28932578716254487</data>
+        </edge>
+        <edge directed="false" source="anger" target="Jon Pardi">
+            <data key="weight">0.18625413601545293</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Jon Pardi">
+            <data key="weight">0.42139998273496226</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Jon Pardi">
+            <data key="weight">0.15598783891294182</data>
+        </edge>
+        <edge directed="false" source="fear" target="Jon Pardi">
+            <data key="weight">0.31430385452607684</data>
+        </edge>
+        <edge directed="false" source="joy" target="Jon Pardi">
+            <data key="weight">0.5634187614467451</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Jon Pardi">
+            <data key="weight">0.39113368563245116</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Jon Pardi">
+            <data key="weight">0.288693910823952</data>
+        </edge>
+        <edge directed="false" source="trust" target="Jon Pardi">
+            <data key="weight">0.33292926812762214</data>
+        </edge>
+        <edge directed="false" source="anger" target="Ariana Grande">
+            <data key="weight">0.2094743642113873</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Ariana Grande">
+            <data key="weight">0.3139181648546</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Ariana Grande">
+            <data key="weight">0.2699109454824598</data>
+        </edge>
+        <edge directed="false" source="fear" target="Ariana Grande">
+            <data key="weight">0.30100938050543885</data>
+        </edge>
+        <edge directed="false" source="joy" target="Ariana Grande">
+            <data key="weight">0.7011816953294336</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Ariana Grande">
+            <data key="weight">0.2986623288055914</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Ariana Grande">
+            <data key="weight">0.18600384721291252</data>
+        </edge>
+        <edge directed="false" source="trust" target="Ariana Grande">
+            <data key="weight">0.28047267813177346</data>
+        </edge>
+        <edge directed="false" source="anger" target="Dierks Bentley">
+            <data key="weight">0.23072831153723297</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Dierks Bentley">
+            <data key="weight">0.40567615215337666</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Dierks Bentley">
+            <data key="weight">0.15212855705751624</data>
+        </edge>
+        <edge directed="false" source="fear" target="Dierks Bentley">
+            <data key="weight">0.339753777428453</data>
+        </edge>
+        <edge directed="false" source="joy" target="Dierks Bentley">
+            <data key="weight">0.49822102436336574</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Dierks Bentley">
+            <data key="weight">0.4025068072146784</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Dierks Bentley">
+            <data key="weight">0.2782684856177068</data>
+        </edge>
+        <edge directed="false" source="trust" target="Dierks Bentley">
+            <data key="weight">0.3949003793618026</data>
+        </edge>
+        <edge directed="false" source="anger" target="Gucci Mane">
+            <data key="weight">0.47195798016394214</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Gucci Mane">
+            <data key="weight">0.31901305332618335</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Gucci Mane">
+            <data key="weight">0.3439868999341169</data>
+        </edge>
+        <edge directed="false" source="fear" target="Gucci Mane">
+            <data key="weight">0.38733322605298254</data>
+        </edge>
+        <edge directed="false" source="joy" target="Gucci Mane">
+            <data key="weight">0.3447822453674906</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Gucci Mane">
+            <data key="weight">0.32712557674659487</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Gucci Mane">
+            <data key="weight">0.21514093972758064</data>
+        </edge>
+        <edge directed="false" source="trust" target="Gucci Mane">
+            <data key="weight">0.3673700556753031</data>
+        </edge>
+        <edge directed="false" source="anger" target="Sia">
+            <data key="weight">0.26402525993579395</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Sia">
+            <data key="weight">0.3911675210310889</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Sia">
+            <data key="weight">0.12714226109529497</data>
+        </edge>
+        <edge directed="false" source="fear" target="Sia">
+            <data key="weight">0.3845028057317388</data>
+        </edge>
+        <edge directed="false" source="joy" target="Sia">
+            <data key="weight">0.47780881992264074</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Sia">
+            <data key="weight">0.3962942251075121</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Sia">
+            <data key="weight">0.2204482752861969</data>
+        </edge>
+        <edge directed="false" source="trust" target="Sia">
+            <data key="weight">0.423465756712555</data>
+        </edge>
+        <edge directed="false" source="anger" target="Kelsea Ballerini">
+            <data key="weight">0.22312906614892583</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Kelsea Ballerini">
+            <data key="weight">0.3222975399928929</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Kelsea Ballerini">
+            <data key="weight">0.2975054215319011</data>
+        </edge>
+        <edge directed="false" source="fear" target="Kelsea Ballerini">
+            <data key="weight">0.4751822705023421</data>
+        </edge>
+        <edge directed="false" source="joy" target="Kelsea Ballerini">
+            <data key="weight">0.42973005332385716</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Kelsea Ballerini">
+            <data key="weight">0.4958423692198352</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Kelsea Ballerini">
+            <data key="weight">0.23139310563592308</data>
+        </edge>
+        <edge directed="false" source="trust" target="Kelsea Ballerini">
+            <data key="weight">0.21899704640542722</data>
+        </edge>
+        <edge directed="false" source="anger" target="Brad Paisley">
+            <data key="weight">0.19832268168579303</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Brad Paisley">
+            <data key="weight">0.4846043770062893</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Brad Paisley">
+            <data key="weight">0.1481196597527785</data>
+        </edge>
+        <edge directed="false" source="fear" target="Brad Paisley">
+            <data key="weight">0.2613876348578444</data>
+        </edge>
+        <edge directed="false" source="joy" target="Brad Paisley">
+            <data key="weight">0.5418607160703885</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Brad Paisley">
+            <data key="weight">0.28877110136676143</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Brad Paisley">
+            <data key="weight">0.24645119858025327</data>
+        </edge>
+        <edge directed="false" source="trust" target="Brad Paisley">
+            <data key="weight">0.4447738802660463</data>
+        </edge>
+        <edge directed="false" source="anger" target="New Found Glory">
+            <data key="weight">0.27828203063907386</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="New Found Glory">
+            <data key="weight">0.4959481734161713</data>
+        </edge>
+        <edge directed="false" source="disgust" target="New Found Glory">
+            <data key="weight">0.17725555086911307</data>
+        </edge>
+        <edge directed="false" source="fear" target="New Found Glory">
+            <data key="weight">0.34670451011963827</data>
+        </edge>
+        <edge directed="false" source="joy" target="New Found Glory">
+            <data key="weight">0.3678282286169937</data>
+        </edge>
+        <edge directed="false" source="sadness" target="New Found Glory">
+            <data key="weight">0.43900597572764793</data>
+        </edge>
+        <edge directed="false" source="surprise" target="New Found Glory">
+            <data key="weight">0.2645056924886247</data>
+        </edge>
+        <edge directed="false" source="trust" target="New Found Glory">
+            <data key="weight">0.3563479468249527</data>
+        </edge>
+        <edge directed="false" source="anger" target="Sylvan Esso">
+            <data key="weight">0.32046249411390443</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Sylvan Esso">
+            <data key="weight">0.42728332548520587</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Sylvan Esso">
+            <data key="weight">0.07308793725404837</data>
+        </edge>
+        <edge directed="false" source="fear" target="Sylvan Esso">
+            <data key="weight">0.3148403450943622</data>
+        </edge>
+        <edge directed="false" source="joy" target="Sylvan Esso">
+            <data key="weight">0.48912696470016986</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Sylvan Esso">
+            <data key="weight">0.32046249411390443</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Sylvan Esso">
+            <data key="weight">0.2248859607816873</data>
+        </edge>
+        <edge directed="false" source="trust" target="Sylvan Esso">
+            <data key="weight">0.46663836862200114</data>
+        </edge>
+        <edge directed="false" source="anger" target="Darius Rucker">
+            <data key="weight">0.1622481571483685</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Darius Rucker">
+            <data key="weight">0.44171866706900326</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Darius Rucker">
+            <data key="weight">0.12032758066027328</data>
+        </edge>
+        <edge directed="false" source="fear" target="Darius Rucker">
+            <data key="weight">0.26239175653659597</data>
+        </edge>
+        <edge directed="false" source="joy" target="Darius Rucker">
+            <data key="weight">0.6257034194334211</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Darius Rucker">
+            <data key="weight">0.2887861935846559</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Darius Rucker">
+            <data key="weight">0.2639443704805995</data>
+        </edge>
+        <edge directed="false" source="trust" target="Darius Rucker">
+            <data key="weight">0.38815348600088156</data>
+        </edge>
+        <edge directed="false" source="anger" target="Little Big Town">
+            <data key="weight">0.1896554281189404</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Little Big Town">
+            <data key="weight">0.4500880631083549</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Little Big Town">
+            <data key="weight">0.14567735783049043</data>
+        </edge>
+        <edge directed="false" source="fear" target="Little Big Town">
+            <data key="weight">0.3112822787604348</data>
+        </edge>
+        <edge directed="false" source="joy" target="Little Big Town">
+            <data key="weight">0.5462900918643392</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Little Big Town">
+            <data key="weight">0.34907593291457145</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Little Big Town">
+            <data key="weight">0.23157202636261925</data>
+        </edge>
+        <edge directed="false" source="trust" target="Little Big Town">
+            <data key="weight">0.4116072516059612</data>
+        </edge>
+        <edge directed="false" source="anger" target="Luke Bryan">
+            <data key="weight">0.2124599528847042</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Luke Bryan">
+            <data key="weight">0.49531326365289474</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Luke Bryan">
+            <data key="weight">0.14078671576697266</data>
+        </edge>
+        <edge directed="false" source="fear" target="Luke Bryan">
+            <data key="weight">0.2745340957455967</data>
+        </edge>
+        <edge directed="false" source="joy" target="Luke Bryan">
+            <data key="weight">0.5407489764685995</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Luke Bryan">
+            <data key="weight">0.3167701104756885</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Luke Bryan">
+            <data key="weight">0.2943722238763974</data>
+        </edge>
+        <edge directed="false" source="trust" target="Luke Bryan">
+            <data key="weight">0.36732534022837415</data>
+        </edge>
+        <edge directed="false" source="anger" target="Machine Gun Kelly">
+            <data key="weight">0.3856394143218724</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Machine Gun Kelly">
+            <data key="weight">0.2978375833825175</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Machine Gun Kelly">
+            <data key="weight">0.3563721373420874</data>
+        </edge>
+        <edge directed="false" source="fear" target="Machine Gun Kelly">
+            <data key="weight">0.4499126500421844</data>
+        </edge>
+        <edge directed="false" source="joy" target="Machine Gun Kelly">
+            <data key="weight">0.2869340880371074</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Machine Gun Kelly">
+            <data key="weight">0.42753179117529005</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Machine Gun Kelly">
+            <data key="weight">0.16355243018115123</data>
+        </edge>
+        <edge directed="false" source="trust" target="Machine Gun Kelly">
+            <data key="weight">0.3758836553286107</data>
+        </edge>
+        <edge directed="false" source="anger" target="Zayn">
+            <data key="weight">0.1703261362044254</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Zayn">
+            <data key="weight">0.42725878234330444</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Zayn">
+            <data key="weight">0.15589171788201647</data>
+        </edge>
+        <edge directed="false" source="fear" target="Zayn">
+            <data key="weight">0.43591943333674976</data>
+        </edge>
+        <edge directed="false" source="joy" target="Zayn">
+            <data key="weight">0.48788333929742195</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Zayn">
+            <data key="weight">0.4301456660077862</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Zayn">
+            <data key="weight">0.20208185651372507</data>
+        </edge>
+        <edge directed="false" source="trust" target="Zayn">
+            <data key="weight">0.33199162141540545</data>
+        </edge>
+        <edge directed="false" source="anger" target="Train">
+            <data key="weight">0.17470926970362213</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Train">
+            <data key="weight">0.4896120753401508</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Train">
+            <data key="weight">0.13124501236272101</data>
+        </edge>
+        <edge directed="false" source="fear" target="Train">
+            <data key="weight">0.28933559543599857</data>
+        </edge>
+        <edge directed="false" source="joy" target="Train">
+            <data key="weight">0.5786711908719971</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Train">
+            <data key="weight">0.31873788716660817</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Train">
+            <data key="weight">0.2203041278945674</data>
+        </edge>
+        <edge directed="false" source="trust" target="Train">
+            <data key="weight">0.3792469513078627</data>
+        </edge>
+        <edge directed="false" source="anger" target="Brantley Gilbert">
+            <data key="weight">0.298544636771049</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Brantley Gilbert">
+            <data key="weight">0.39997326336634126</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Brantley Gilbert">
+            <data key="weight">0.24400282813018426</data>
+        </edge>
+        <edge directed="false" source="fear" target="Brantley Gilbert">
+            <data key="weight">0.34160395938225796</data>
+        </edge>
+        <edge directed="false" source="joy" target="Brantley Gilbert">
+            <data key="weight">0.4478169551565735</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Brantley Gilbert">
+            <data key="weight">0.3167252396513372</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Brantley Gilbert">
+            <data key="weight">0.2507009449808168</data>
+        </edge>
+        <edge directed="false" source="trust" target="Brantley Gilbert">
+            <data key="weight">0.4592994411862292</data>
+        </edge>
+        <edge directed="false" source="anger" target="Josh Turner">
+            <data key="weight">0.17113068785909472</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Josh Turner">
+            <data key="weight">0.43499699986529666</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Josh Turner">
+            <data key="weight">0.13671334281480751</data>
+        </edge>
+        <edge directed="false" source="fear" target="Josh Turner">
+            <data key="weight">0.2533499010204475</data>
+        </edge>
+        <edge directed="false" source="joy" target="Josh Turner">
+            <data key="weight">0.5879629778399065</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Josh Turner">
+            <data key="weight">0.2896793207894173</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Josh Turner">
+            <data key="weight">0.2122402944397711</data>
+        </edge>
+        <edge directed="false" source="trust" target="Josh Turner">
+            <data key="weight">0.4732384943589491</data>
+        </edge>
+        <edge directed="false" source="anger" target="OneRepublic">
+            <data key="weight">0.26298977548290325</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="OneRepublic">
+            <data key="weight">0.39942133136481894</data>
+        </edge>
+        <edge directed="false" source="disgust" target="OneRepublic">
+            <data key="weight">0.17233459690347244</data>
+        </edge>
+        <edge directed="false" source="fear" target="OneRepublic">
+            <data key="weight">0.4021140594414357</data>
+        </edge>
+        <edge directed="false" source="joy" target="OneRepublic">
+            <data key="weight">0.42365588405436977</data>
+        </edge>
+        <edge directed="false" source="sadness" target="OneRepublic">
+            <data key="weight">0.44250498059068705</data>
+        </edge>
+        <edge directed="false" source="surprise" target="OneRepublic">
+            <data key="weight">0.22529158241026867</data>
+        </edge>
+        <edge directed="false" source="trust" target="OneRepublic">
+            <data key="weight">0.39224072316050757</data>
+        </edge>
+        <edge directed="false" source="anger" target="Logic">
+            <data key="weight">0.39572096968797144</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Logic">
+            <data key="weight">0.403078331674202</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Logic">
+            <data key="weight">0.28746264331915056</data>
+        </edge>
+        <edge directed="false" source="fear" target="Logic">
+            <data key="weight">0.3612990261095357</data>
+        </edge>
+        <edge directed="false" source="joy" target="Logic">
+            <data key="weight">0.38363387499630697</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Logic">
+            <data key="weight">0.3387014142946847</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Logic">
+            <data key="weight">0.2062688985425349</data>
+        </edge>
+        <edge directed="false" source="trust" target="Logic">
+            <data key="weight">0.4041293833865206</data>
+        </edge>
+        <edge directed="false" source="anger" target="Linkin Park">
+            <data key="weight">0.39980039568202175</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Linkin Park">
+            <data key="weight">0.3506953180692396</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Linkin Park">
+            <data key="weight">0.23856561328414644</data>
+        </edge>
+        <edge directed="false" source="fear" target="Linkin Park">
+            <data key="weight">0.4736513391784107</data>
+        </edge>
+        <edge directed="false" source="joy" target="Linkin Park">
+            <data key="weight">0.22077952218030408</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Linkin Park">
+            <data key="weight">0.46514494778092086</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Linkin Park">
+            <data key="weight">0.1960336562966973</data>
+        </edge>
+        <edge directed="false" source="trust" target="Linkin Park">
+            <data key="weight">0.3638415593199057</data>
+        </edge>
+        <edge directed="false" source="anger" target="Journey">
+            <data key="weight">0.22776014302524228</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Journey">
+            <data key="weight">0.47082799423751714</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Journey">
+            <data key="weight">0.1284919747820613</data>
+        </edge>
+        <edge directed="false" source="fear" target="Journey">
+            <data key="weight">0.32749218121348483</data>
+        </edge>
+        <edge directed="false" source="joy" target="Journey">
+            <data key="weight">0.5682406827004517</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Journey">
+            <data key="weight">0.32749218121348483</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Journey">
+            <data key="weight">0.24121237143202848</data>
+        </edge>
+        <edge directed="false" source="trust" target="Journey">
+            <data key="weight">0.33816118994990146</data>
+        </edge>
+        <edge directed="false" source="anger" target="Hailee Steinfeld">
+            <data key="weight">0.35873386854904615</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Hailee Steinfeld">
+            <data key="weight">0.2869870948392369</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Hailee Steinfeld">
+            <data key="weight">0.3074861730420395</data>
+        </edge>
+        <edge directed="false" source="fear" target="Hailee Steinfeld">
+            <data key="weight">0.4868531073165626</data>
+        </edge>
+        <edge directed="false" source="joy" target="Hailee Steinfeld">
+            <data key="weight">0.3638586380997468</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Hailee Steinfeld">
+            <data key="weight">0.4971026464179639</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Hailee Steinfeld">
+            <data key="weight">0.19474124292662504</data>
+        </edge>
+        <edge directed="false" source="trust" target="Hailee Steinfeld">
+            <data key="weight">0.1998660124773257</data>
+        </edge>
+        <edge directed="false" source="anger" target="Jason Derulo">
+            <data key="weight">0.256003431589601</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Jason Derulo">
+            <data key="weight">0.3931939183012236</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Jason Derulo">
+            <data key="weight">0.16240618364615755</data>
+        </edge>
+        <edge directed="false" source="fear" target="Jason Derulo">
+            <data key="weight">0.33763390810648547</data>
+        </edge>
+        <edge directed="false" source="joy" target="Jason Derulo">
+            <data key="weight">0.6111601121421193</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Jason Derulo">
+            <data key="weight">0.33165052239320597</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Jason Derulo">
+            <data key="weight">0.23249727343028873</data>
+        </edge>
+        <edge directed="false" source="trust" target="Jason Derulo">
+            <data key="weight">0.3192563662728413</data>
+        </edge>
+        <edge directed="false" source="anger" target="Nirvana">
+            <data key="weight">0.31620118194112706</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Nirvana">
+            <data key="weight">0.3846100914956978</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Nirvana">
+            <data key="weight">0.28959771711434956</data>
+        </edge>
+        <edge directed="false" source="fear" target="Nirvana">
+            <data key="weight">0.3846100914956978</data>
+        </edge>
+        <edge directed="false" source="joy" target="Nirvana">
+            <data key="weight">0.398291873406612</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Nirvana">
+            <data key="weight">0.394491378431358</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Nirvana">
+            <data key="weight">0.1938252437379505</data>
+        </edge>
+        <edge directed="false" source="trust" target="Nirvana">
+            <data key="weight">0.41045345732742455</data>
+        </edge>
+        <edge directed="false" source="anger" target="Shakira">
+            <data key="weight">0.2650864232583906</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Shakira">
+            <data key="weight">0.46749231293844257</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Shakira">
+            <data key="weight">0.17759484513862622</data>
+        </edge>
+        <edge directed="false" source="fear" target="Shakira">
+            <data key="weight">0.32515526793763183</data>
+        </edge>
+        <edge directed="false" source="joy" target="Shakira">
+            <data key="weight">0.4557397128925041</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Shakira">
+            <data key="weight">0.40872931270875007</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Shakira">
+            <data key="weight">0.21611725640031354</data>
+        </edge>
+        <edge directed="false" source="trust" target="Shakira">
+            <data key="weight">0.390447490415068</data>
+        </edge>
+        <edge directed="false" source="anger" target="MercyMe">
+            <data key="weight">0.11792764880213487</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="MercyMe">
+            <data key="weight">0.42875123743061894</data>
+        </edge>
+        <edge directed="false" source="disgust" target="MercyMe">
+            <data key="weight">0.12256052071936159</data>
+        </edge>
+        <edge directed="false" source="fear" target="MercyMe">
+            <data key="weight">0.26028316771328336</data>
+        </edge>
+        <edge directed="false" source="joy" target="MercyMe">
+            <data key="weight">0.564368033553074</data>
+        </edge>
+        <edge directed="false" source="sadness" target="MercyMe">
+            <data key="weight">0.26281018875904344</data>
+        </edge>
+        <edge directed="false" source="surprise" target="MercyMe">
+            <data key="weight">0.14151317856256185</data>
+        </edge>
+        <edge directed="false" source="trust" target="MercyMe">
+            <data key="weight">0.5584716511129673</data>
+        </edge>
+        <edge directed="false" source="anger" target="Panic! At The Disco">
+            <data key="weight">0.3178449511024893</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Panic! At The Disco">
+            <data key="weight">0.3803324273116743</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Panic! At The Disco">
+            <data key="weight">0.24213897031059203</data>
+        </edge>
+        <edge directed="false" source="fear" target="Panic! At The Disco">
+            <data key="weight">0.4073702775944948</data>
+        </edge>
+        <edge directed="false" source="joy" target="Panic! At The Disco">
+            <data key="weight">0.423592987764187</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Panic! At The Disco">
+            <data key="weight">0.38754252072042644</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Panic! At The Disco">
+            <data key="weight">0.2751852317673726</data>
+        </edge>
+        <edge directed="false" source="trust" target="Panic! At The Disco">
+            <data key="weight">0.35269373591145786</data>
+        </edge>
+        <edge directed="false" source="anger" target="Carlene Carter">
+            <data key="weight">0.19547885168098533</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="Carlene Carter">
+            <data key="weight">0.4110291925970718</data>
+        </edge>
+        <edge directed="false" source="disgust" target="Carlene Carter">
+            <data key="weight">0.15795389354579617</data>
+        </edge>
+        <edge directed="false" source="fear" target="Carlene Carter">
+            <data key="weight">0.2923456040764736</data>
+        </edge>
+        <edge directed="false" source="joy" target="Carlene Carter">
+            <data key="weight">0.5986539832730176</data>
+        </edge>
+        <edge directed="false" source="sadness" target="Carlene Carter">
+            <data key="weight">0.3769949282419003</data>
+        </edge>
+        <edge directed="false" source="surprise" target="Carlene Carter">
+            <data key="weight">0.27663748206639444</data>
+        </edge>
+        <edge directed="false" source="trust" target="Carlene Carter">
+            <data key="weight">0.32463452154163636</data>
+        </edge>
+        <edge directed="false" source="anger" target="volumes">
+            <data key="weight">0.3733278217291302</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="volumes">
+            <data key="weight">0.45842460462327017</data>
+        </edge>
+        <edge directed="false" source="disgust" target="volumes">
+            <data key="weight">0.299211268885847</data>
+        </edge>
+        <edge directed="false" source="fear" target="volumes">
+            <data key="weight">0.4007783968562721</data>
+        </edge>
+        <edge directed="false" source="joy" target="volumes">
+            <data key="weight">0.312936556449418</data>
+        </edge>
+        <edge directed="false" source="sadness" target="volumes">
+            <data key="weight">0.370582764216416</data>
+        </edge>
+        <edge directed="false" source="surprise" target="volumes">
+            <data key="weight">0.20862437096627864</data>
+        </edge>
+        <edge directed="false" source="trust" target="volumes">
+            <data key="weight">0.34862230411470246</data>
+        </edge>
+        <edge directed="false" source="anger" target="fellsilent">
+            <data key="weight">0.3581582308390942</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="fellsilent">
+            <data key="weight">0.42448382914263016</data>
+        </edge>
+        <edge directed="false" source="disgust" target="fellsilent">
+            <data key="weight">0.23213959406237586</data>
+        </edge>
+        <edge directed="false" source="fear" target="fellsilent">
+            <data key="weight">0.378055910330155</data>
+        </edge>
+        <edge directed="false" source="joy" target="fellsilent">
+            <data key="weight">0.29846519236591185</data>
+        </edge>
+        <edge directed="false" source="sadness" target="fellsilent">
+            <data key="weight">0.42448382914263016</data>
+        </edge>
+        <edge directed="false" source="surprise" target="fellsilent">
+            <data key="weight">0.19897679491060788</data>
+        </edge>
+        <edge directed="false" source="trust" target="fellsilent">
+            <data key="weight">0.43111638897298377</data>
+        </edge>
+        <edge directed="false" source="anger" target="textures">
+            <data key="weight">0.3278061309518497</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="textures">
+            <data key="weight">0.44832309086061795</data>
+        </edge>
+        <edge directed="false" source="disgust" target="textures">
+            <data key="weight">0.19122024305524565</data>
+        </edge>
+        <edge directed="false" source="fear" target="textures">
+            <data key="weight">0.4611782332508866</data>
+        </edge>
+        <edge directed="false" source="joy" target="textures">
+            <data key="weight">0.26995799019564093</data>
+        </edge>
+        <edge directed="false" source="sadness" target="textures">
+            <data key="weight">0.44028862686670006</data>
+        </edge>
+        <edge directed="false" source="surprise" target="textures">
+            <data key="weight">0.18157888626254418</data>
+        </edge>
+        <edge directed="false" source="trust" target="textures">
+            <data key="weight">0.37761980771414055</data>
+        </edge>
+        <edge directed="false" source="anger" target="skyharbor">
+            <data key="weight">0.37829487472552403</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="skyharbor">
+            <data key="weight">0.3625325882786272</data>
+        </edge>
+        <edge directed="false" source="disgust" target="skyharbor">
+            <data key="weight">0.2585014977291081</data>
+        </edge>
+        <edge directed="false" source="fear" target="skyharbor">
+            <data key="weight">0.47286859340690507</data>
+        </edge>
+        <edge directed="false" source="joy" target="skyharbor">
+            <data key="weight">0.3120932716485573</data>
+        </edge>
+        <edge directed="false" source="sadness" target="skyharbor">
+            <data key="weight">0.43503910593435263</data>
+        </edge>
+        <edge directed="false" source="surprise" target="skyharbor">
+            <data key="weight">0.18599498007338264</data>
+        </edge>
+        <edge directed="false" source="trust" target="skyharbor">
+            <data key="weight">0.33731292996359225</data>
+        </edge>
+        <edge directed="false" source="anger" target="born of osiris">
+            <data key="weight">0.26071640649039496</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="born of osiris">
+            <data key="weight">0.4998013207392288</data>
+        </edge>
+        <edge directed="false" source="disgust" target="born of osiris">
+            <data key="weight">0.17988293548245593</data>
+        </edge>
+        <edge directed="false" source="fear" target="born of osiris">
+            <data key="weight">0.42921434605623976</data>
+        </edge>
+        <edge directed="false" source="joy" target="born of osiris">
+            <data key="weight">0.3085333893401617</data>
+        </edge>
+        <edge directed="false" source="sadness" target="born of osiris">
+            <data key="weight">0.3734278660648452</data>
+        </edge>
+        <edge directed="false" source="surprise" target="born of osiris">
+            <data key="weight">0.1867139330324226</data>
+        </edge>
+        <edge directed="false" source="trust" target="born of osiris">
+            <data key="weight">0.44287634115617314</data>
+        </edge>
+        <edge directed="false" source="anger" target="uneven structure">
+            <data key="weight">0.29209706131803603</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="uneven structure">
+            <data key="weight">0.37729203753579654</data>
+        </edge>
+        <edge directed="false" source="disgust" target="uneven structure">
+            <data key="weight">0.26775563954153303</data>
+        </edge>
+        <edge directed="false" source="fear" target="uneven structure">
+            <data key="weight">0.36512132664754504</data>
+        </edge>
+        <edge directed="false" source="joy" target="uneven structure">
+            <data key="weight">0.24341421776503006</data>
+        </edge>
+        <edge directed="false" source="sadness" target="uneven structure">
+            <data key="weight">0.5111698573065631</data>
+        </edge>
+        <edge directed="false" source="surprise" target="uneven structure">
+            <data key="weight">0.25558492865328153</data>
+        </edge>
+        <edge directed="false" source="trust" target="uneven structure">
+            <data key="weight">0.42597488108880255</data>
+        </edge>
+        <edge directed="false" source="anger" target="vildhjarta">
+            <data key="weight">0.43504418316227667</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="vildhjarta">
+            <data key="weight">0.330214259508716</data>
+        </edge>
+        <edge directed="false" source="disgust" target="vildhjarta">
+            <data key="weight">0.25159181676854553</data>
+        </edge>
+        <edge directed="false" source="fear" target="vildhjarta">
+            <data key="weight">0.5451156029985154</data>
+        </edge>
+        <edge directed="false" source="joy" target="vildhjarta">
+            <data key="weight">0.1310374045669508</data>
+        </edge>
+        <edge directed="false" source="sadness" target="vildhjarta">
+            <data key="weight">0.4612516640756668</data>
+        </edge>
+        <edge directed="false" source="surprise" target="vildhjarta">
+            <data key="weight">0.2306258320378334</data>
+        </edge>
+        <edge directed="false" source="trust" target="vildhjarta">
+            <data key="weight">0.24110882440318948</data>
+        </edge>
+        <edge directed="false" source="anger" target="monuments">
+            <data key="weight">0.37107383655247195</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="monuments">
+            <data key="weight">0.39239991911295885</data>
+        </edge>
+        <edge directed="false" source="disgust" target="monuments">
+            <data key="weight">0.21752604211696633</data>
+        </edge>
+        <edge directed="false" source="fear" target="monuments">
+            <data key="weight">0.6184563942541199</data>
+        </edge>
+        <edge directed="false" source="joy" target="monuments">
+            <data key="weight">0.123691278850824</data>
+        </edge>
+        <edge directed="false" source="sadness" target="monuments">
+            <data key="weight">0.4265216512097379</data>
+        </edge>
+        <edge directed="false" source="surprise" target="monuments">
+            <data key="weight">0.1620782274597004</data>
+        </edge>
+        <edge directed="false" source="trust" target="monuments">
+            <data key="weight">0.23458690816535585</data>
+        </edge>
+        <edge directed="false" source="anger" target="bulb">
+            <data key="weight">0.2504897164340598</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="bulb">
+            <data key="weight">0.3757345746510897</data>
+        </edge>
+        <edge directed="false" source="disgust" target="bulb">
+            <data key="weight">0.2504897164340598</data>
+        </edge>
+        <edge directed="false" source="fear" target="bulb">
+            <data key="weight">0.5009794328681196</data>
+        </edge>
+        <edge directed="false" source="joy" target="bulb">
+            <data key="weight">0.31311214554257477</data>
+        </edge>
+        <edge directed="false" source="sadness" target="bulb">
+            <data key="weight">0.5009794328681196</data>
+        </edge>
+        <edge directed="false" source="surprise" target="bulb">
+            <data key="weight">0.18786728732554486</data>
+        </edge>
+        <edge directed="false" source="trust" target="bulb">
+            <data key="weight">0.31311214554257477</data>
+        </edge>
+        <edge directed="false" source="anger" target="periphery">
+            <data key="weight">0.3327879271796565</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="periphery">
+            <data key="weight">0.38624481140987277</data>
+        </edge>
+        <edge directed="false" source="disgust" target="periphery">
+            <data key="weight">0.2815897845366324</data>
+        </edge>
+        <edge directed="false" source="fear" target="periphery">
+            <data key="weight">0.42690215997933306</data>
+        </edge>
+        <edge directed="false" source="joy" target="periphery">
+            <data key="weight">0.3237529608308875</data>
+        </edge>
+        <edge directed="false" source="sadness" target="periphery">
+            <data key="weight">0.4494895758512555</data>
+        </edge>
+        <edge directed="false" source="surprise" target="periphery">
+            <data key="weight">0.2341562112055954</data>
+        </edge>
+        <edge directed="false" source="trust" target="periphery">
+            <data key="weight">0.34182289352842543</data>
+        </edge>
+        <edge directed="false" source="anger" target="veil of maya">
+            <data key="weight">0.3463624870346411</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="veil of maya">
+            <data key="weight">0.38121657378026536</data>
+        </edge>
+        <edge directed="false" source="disgust" target="veil of maya">
+            <data key="weight">0.28754621565140015</data>
+        </edge>
+        <edge directed="false" source="fear" target="veil of maya">
+            <data key="weight">0.4770653123307321</data>
+        </edge>
+        <edge directed="false" source="joy" target="veil of maya">
+            <data key="weight">0.27011917227858806</data>
+        </edge>
+        <edge directed="false" source="sadness" target="veil of maya">
+            <data key="weight">0.4334977038987018</data>
+        </edge>
+        <edge directed="false" source="surprise" target="veil of maya">
+            <data key="weight">0.18951909667933192</data>
+        </edge>
+        <edge directed="false" source="trust" target="veil of maya">
+            <data key="weight">0.3572543891426487</data>
+        </edge>
+        <edge directed="false" source="anger" target="meshuggah">
+            <data key="weight">0.41870111782923924</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="meshuggah">
+            <data key="weight">0.23507281188706433</data>
+        </edge>
+        <edge directed="false" source="disgust" target="meshuggah">
+            <data key="weight">0.3608260486412386</data>
+        </edge>
+        <edge directed="false" source="fear" target="meshuggah">
+            <data key="weight">0.5365947772862776</data>
+        </edge>
+        <edge directed="false" source="joy" target="meshuggah">
+            <data key="weight">0.19363140432034784</data>
+        </edge>
+        <edge directed="false" source="sadness" target="meshuggah">
+            <data key="weight">0.4551409762068693</data>
+        </edge>
+        <edge directed="false" source="surprise" target="meshuggah">
+            <data key="weight">0.14861746161856956</data>
+        </edge>
+        <edge directed="false" source="trust" target="meshuggah">
+            <data key="weight">0.29080435999402793</data>
+        </edge>
+        <edge directed="false" source="anger" target="structures">
+            <data key="weight">0.29736218498814504</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="structures">
+            <data key="weight">0.5215275244407467</data>
+        </edge>
+        <edge directed="false" source="disgust" target="structures">
+            <data key="weight">0.18756691668482994</data>
+        </edge>
+        <edge directed="false" source="fear" target="structures">
+            <data key="weight">0.40715745329146014</data>
+        </edge>
+        <edge directed="false" source="joy" target="structures">
+            <data key="weight">0.2699133679123163</data>
+        </edge>
+        <edge directed="false" source="sadness" target="structures">
+            <data key="weight">0.42088186182937454</data>
+        </edge>
+        <edge directed="false" source="surprise" target="structures">
+            <data key="weight">0.17384250814691557</data>
+        </edge>
+        <edge directed="false" source="trust" target="structures">
+            <data key="weight">0.39800784759951724</data>
+        </edge>
+        <edge directed="false" source="anger" target="after the burial">
+            <data key="weight">0.31768688154506197</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="after the burial">
+            <data key="weight">0.30760158371823465</data>
+        </edge>
+        <edge directed="false" source="disgust" target="after the burial">
+            <data key="weight">0.26726039241092514</data>
+        </edge>
+        <edge directed="false" source="fear" target="after the burial">
+            <data key="weight">0.48913694460112717</data>
+        </edge>
+        <edge directed="false" source="joy" target="after the burial">
+            <data key="weight">0.26726039241092514</data>
+        </edge>
+        <edge directed="false" source="sadness" target="after the burial">
+            <data key="weight">0.5143501891681956</data>
+        </edge>
+        <edge directed="false" source="surprise" target="after the burial">
+            <data key="weight">0.22439787664690886</data>
+        </edge>
+        <edge directed="false" source="trust" target="after the burial">
+            <data key="weight">0.32777217937188935</data>
+        </edge>
+        <edge directed="false" source="anger" target="haunted shores">
+            <data key="weight">0.31622776601683794</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="haunted shores">
+            <data key="weight">0.3952847075210474</data>
+        </edge>
+        <edge directed="false" source="disgust" target="haunted shores">
+            <data key="weight">0.15811388300841897</data>
+        </edge>
+        <edge directed="false" source="fear" target="haunted shores">
+            <data key="weight">0.5533985905294664</data>
+        </edge>
+        <edge directed="false" source="joy" target="haunted shores">
+            <data key="weight">0.31622776601683794</data>
+        </edge>
+        <edge directed="false" source="sadness" target="haunted shores">
+            <data key="weight">0.3952847075210474</data>
+        </edge>
+        <edge directed="false" source="surprise" target="haunted shores">
+            <data key="weight">0.001</data>
+        </edge>
+        <edge directed="false" source="trust" target="haunted shores">
+            <data key="weight">0.3952847075210474</data>
+        </edge>
+        <edge directed="false" source="anger" target="destiny potato">
+            <data key="weight">0.31540745914606094</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="destiny potato">
+            <data key="weight">0.4074013013969954</data>
+        </edge>
+        <edge directed="false" source="disgust" target="destiny potato">
+            <data key="weight">0.2759815267528033</data>
+        </edge>
+        <edge directed="false" source="fear" target="destiny potato">
+            <data key="weight">0.5256790985767682</data>
+        </edge>
+        <edge directed="false" source="joy" target="destiny potato">
+            <data key="weight">0.34169141407489934</data>
+        </edge>
+        <edge directed="false" source="sadness" target="destiny potato">
+            <data key="weight">0.42054327886141457</data>
+        </edge>
+        <edge directed="false" source="surprise" target="destiny potato">
+            <data key="weight">0.21027163943070729</data>
+        </edge>
+        <edge directed="false" source="trust" target="destiny potato">
+            <data key="weight">0.21027163943070729</data>
+        </edge>
+        <edge directed="false" source="anger" target="algorithm">
+            <data key="weight">0.3964539674075865</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="algorithm">
+            <data key="weight">0.2766918314198781</data>
+        </edge>
+        <edge directed="false" source="disgust" target="algorithm">
+            <data key="weight">0.322118848518664</data>
+        </edge>
+        <edge directed="false" source="fear" target="algorithm">
+            <data key="weight">0.5492539340125938</data>
+        </edge>
+        <edge directed="false" source="joy" target="algorithm">
+            <data key="weight">0.23952427197541684</data>
+        </edge>
+        <edge directed="false" source="sadness" target="algorithm">
+            <data key="weight">0.425362069197723</data>
+        </edge>
+        <edge directed="false" source="surprise" target="algorithm">
+            <data key="weight">0.11563240716054606</data>
+        </edge>
+        <edge directed="false" source="trust" target="algorithm">
+            <data key="weight">0.33037830617298874</data>
+        </edge>
+        <edge directed="false" source="anger" target="elitist">
+            <data key="weight">0.22885767968994694</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="elitist">
+            <data key="weight">0.4863225693411372</data>
+        </edge>
+        <edge directed="false" source="disgust" target="elitist">
+            <data key="weight">0.10727703735466262</data>
+        </edge>
+        <edge directed="false" source="fear" target="elitist">
+            <data key="weight">0.43625995190896133</data>
+        </edge>
+        <edge directed="false" source="joy" target="elitist">
+            <data key="weight">0.314679309573677</data>
+        </edge>
+        <edge directed="false" source="sadness" target="elitist">
+            <data key="weight">0.3933491369670963</data>
+        </edge>
+        <edge directed="false" source="surprise" target="elitist">
+            <data key="weight">0.21455407470932525</data>
+        </edge>
+        <edge directed="false" source="trust" target="elitist">
+            <data key="weight">0.4577153593798939</data>
+        </edge>
+        <edge directed="false" source="anger" target="david maxim micic">
+            <data key="weight">0.3068974527617131</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="david maxim micic">
+            <data key="weight">0.37509688670876046</data>
+        </edge>
+        <edge directed="false" source="disgust" target="david maxim micic">
+            <data key="weight">0.1363988678940947</data>
+        </edge>
+        <edge directed="false" source="fear" target="david maxim micic">
+            <data key="weight">0.4091966036822841</data>
+        </edge>
+        <edge directed="false" source="joy" target="david maxim micic">
+            <data key="weight">0.4091966036822841</data>
+        </edge>
+        <edge directed="false" source="sadness" target="david maxim micic">
+            <data key="weight">0.37509688670876046</data>
+        </edge>
+        <edge directed="false" source="surprise" target="david maxim micic">
+            <data key="weight">0.2727977357881894</data>
+        </edge>
+        <edge directed="false" source="trust" target="david maxim micic">
+            <data key="weight">0.44329632065580776</data>
+        </edge>
+        <edge directed="false" source="anger" target="circles">
+            <data key="weight">0.4629100498862757</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="circles">
+            <data key="weight">0.1543033499620919</data>
+        </edge>
+        <edge directed="false" source="disgust" target="circles">
+            <data key="weight">0.1543033499620919</data>
+        </edge>
+        <edge directed="false" source="fear" target="circles">
+            <data key="weight">0.6172133998483676</data>
+        </edge>
+        <edge directed="false" source="joy" target="circles">
+            <data key="weight">0.1543033499620919</data>
+        </edge>
+        <edge directed="false" source="sadness" target="circles">
+            <data key="weight">0.4629100498862757</data>
+        </edge>
+        <edge directed="false" source="surprise" target="circles">
+            <data key="weight">0.1543033499620919</data>
+        </edge>
+        <edge directed="false" source="trust" target="circles">
+            <data key="weight">0.3086066999241838</data>
+        </edge>
+        <edge directed="false" source="anger" target="circle of contempt">
+            <data key="weight">0.43206299267896064</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="circle of contempt">
+            <data key="weight">0.31935090763227525</data>
+        </edge>
+        <edge directed="false" source="disgust" target="circle of contempt">
+            <data key="weight">0.3287435813861657</data>
+        </edge>
+        <edge directed="false" source="fear" target="circle of contempt">
+            <data key="weight">0.43206299267896064</data>
+        </edge>
+        <edge directed="false" source="joy" target="circle of contempt">
+            <data key="weight">0.1972461488316994</data>
+        </edge>
+        <edge directed="false" source="sadness" target="circle of contempt">
+            <data key="weight">0.3850996239095084</data>
+        </edge>
+        <edge directed="false" source="surprise" target="circle of contempt">
+            <data key="weight">0.09392673753890449</data>
+        </edge>
+        <edge directed="false" source="trust" target="circle of contempt">
+            <data key="weight">0.46963368769452246</data>
+        </edge>
+        <edge directed="false" source="anger" target="hacktivist">
+            <data key="weight">0.44715680638787647</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="hacktivist">
+            <data key="weight">0.2916240041660064</data>
+        </edge>
+        <edge directed="false" source="disgust" target="hacktivist">
+            <data key="weight">0.3062052043743067</data>
+        </edge>
+        <edge directed="false" source="fear" target="hacktivist">
+            <data key="weight">0.5273534075335282</data>
+        </edge>
+        <edge directed="false" source="joy" target="hacktivist">
+            <data key="weight">0.1968462028120543</data>
+        </edge>
+        <edge directed="false" source="sadness" target="hacktivist">
+            <data key="weight">0.4034132057629755</data>
+        </edge>
+        <edge directed="false" source="surprise" target="hacktivist">
+            <data key="weight">0.1968462028120543</data>
+        </edge>
+        <edge directed="false" source="trust" target="hacktivist">
+            <data key="weight">0.32078640458260704</data>
+        </edge>
+        <edge directed="false" source="anger" target="corelia">
+            <data key="weight">0.35513927815025526</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="corelia">
+            <data key="weight">0.3773354830346462</data>
+        </edge>
+        <edge directed="false" source="disgust" target="corelia">
+            <data key="weight">0.12207912686415023</data>
+        </edge>
+        <edge directed="false" source="fear" target="corelia">
+            <data key="weight">0.46612030257221</data>
+        </edge>
+        <edge directed="false" source="joy" target="corelia">
+            <data key="weight">0.3329430732658643</data>
+        </edge>
+        <edge directed="false" source="sadness" target="corelia">
+            <data key="weight">0.49941460989879644</data>
+        </edge>
+        <edge directed="false" source="surprise" target="corelia">
+            <data key="weight">0.22196204884390952</data>
+        </edge>
+        <edge directed="false" source="trust" target="corelia">
+            <data key="weight">0.29964876593927786</data>
+        </edge>
+        <edge directed="false" source="anger" target="ion dissonance">
+            <data key="weight">0.3958584111831891</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="ion dissonance">
+            <data key="weight">0.32906748583952344</data>
+        </edge>
+        <edge directed="false" source="disgust" target="ion dissonance">
+            <data key="weight">0.3046317814454994</data>
+        </edge>
+        <edge directed="false" source="fear" target="ion dissonance">
+            <data key="weight">0.4300683973348227</data>
+        </edge>
+        <edge directed="false" source="joy" target="ion dissonance">
+            <data key="weight">0.2704217952938658</data>
+        </edge>
+        <edge directed="false" source="sadness" target="ion dissonance">
+            <data key="weight">0.44635886693083876</data>
+        </edge>
+        <edge directed="false" source="surprise" target="ion dissonance">
+            <data key="weight">0.22480848042502097</data>
+        </edge>
+        <edge directed="false" source="trust" target="ion dissonance">
+            <data key="weight">0.3665355659103603</data>
+        </edge>
+        <edge directed="false" source="anger" target="erra">
+            <data key="weight">0.3107985746182547</data>
+        </edge>
+        <edge directed="false" source="anticipation" target="erra">
+            <data key="weight">0.32402404587860595</data>
+        </edge>
+        <edge directed="false" source="disgust" target="erra">
+            <data key="weight">0.23475211487123493</data>
+        </edge>
+        <edge directed="false" source="fear" target="erra">
+            <data key="weight">0.44966602285194296</data>
+        </edge>
+        <edge directed="false" source="joy" target="erra">
+            <data key="weight">0.2843476320975522</data>
+        </edge>
+        <edge directed="false" source="sadness" target="erra">
+            <data key="weight">0.502567907893348</data>
+        </edge>
+        <edge directed="false" source="surprise" target="erra">
+            <data key="weight">0.21822027579579586</data>
+        </edge>
+        <edge directed="false" source="trust" target="erra">
+            <data key="weight">0.40007050562562574</data>
+        </edge>
+    </graph>
+</graphml>

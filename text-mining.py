@@ -23,7 +23,7 @@ def tokenize(lyrics):
     logging.info("Tokenizing")
     import re
     from nltk.stem.porter import PorterStemmer
-    regex = re.compile(r"[.:,;-_')(`!?]")
+    regex = re.compile(r"[.:,;_')(`!?\-]")
     stemmer = PorterStemmer()
     for song in tqdm(lyrics):
         try:
