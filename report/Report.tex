@@ -48,33 +48,96 @@
 	
 	In our dataset, all songs, except for one, are in English. For the ??? dataset, we implemented a rudimentary language detection using the \textit{langdetect} Python package \cite{langdetect}. This package is a port of Google's language detection library.
 	
+	\section{Visualization}
+	Used Gephi to visualize the results as a graph
+	The \textit{pygraphml} package was used to dump the extracted information to a GraphML file, that can be imported by Gephi.
+	Calculate modularity classes in Gephi
+	
 	\section{Emotion Mining}
-	NRC Emotion Lexicon (EmoLex)
+	The emotion mining is done by first tokenizing every song's text. Afterwards, every token is looked up in an emotion lexicon for its emotional value. For our experiments, we used the \textit{NRC Emotion Lexicon} (EmoLex) by... This lexicon specifies the emotional value for the eight emotions \textit{anger}, \textit{anticipation}, \textit{disgust}, \textit{fear}, \textit{joy}, \textit{sadness}, \textit{surprise}, and \textit{trust}.
+	
+	The emotion mining we apply to the lyrics is only rudimentary. It does not handle negations...
+	
+	We define the \textit{strength} of an emotion by...
 	
 		\subsection{Results}
+		Figure \ref{fig:emotiongraph} shows a graph of all 120 artists, where each artist is connected to every emotion. The edges themselves have weights depending on the strength of the emotion in an artist's song. The weights are normalized between 0 and 1.
+		
+		The full graph is of course quite confusing and does not yield any useful insight. Therefore, Figure \ref{fig:reducedemotiongraph} shows a graph that contains only those edges with weights higher than $0.3$.
 		
 		\begin{figure}[htb]
 			\centering
-			\includegraphics[trim=0mm 50mm 0mm 50mm, clip, width=0.7\linewidth]{data/emotion_clusters}
-			\caption{Emotion clusters}
-			\label{fig:emotionclusters}
+			\includegraphics[trim=0mm 50mm 0mm 50mm, clip, width=0.7\linewidth]{data/emotion_graph}
+			\caption{Full emotion graph}
+			\label{fig:emotiongraph}
+		\end{figure}
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 50mm 0mm 30mm, clip, width=0.7\linewidth]{data/emotion_graph_weight3-7}
+			\caption{Emotion graph with edge weights higher than $0.3$}
+			\label{fig:reducedemotiongraph}
+		\end{figure}
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 50mm 0mm 30mm, clip, width=0.7\linewidth]{data/emotion_graph_new_modularity}
+			\caption{Reduced emotion graph with recalculated modularity}
+			\label{fig:emotionnewmod}
+		\end{figure}
+		
+		Figure \ref{fig:emotionsimilarity} shows the emotion similarity between individual artists. The modularity score separates the graph into three main regions, which...
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 50mm 0mm 50mm, clip, width=0.7\linewidth]{data/emotion_similarity}
+			\caption{Emotion similarity between artists}
+			\label{fig:emotionsimilarity}
 		\end{figure}
 	
 	\section{Topic Extraction}
-	Non-negative Matrix Factorization (NMF)
-	Extracted 10 topics
+	The Non-negative Matrix Factorization (NMF) algorithm has been used to extract potential topics from the lyrics. The \textit{sklearn} Python package provides everything necessary to apply NMF to the data. First, a tf-idf feature vector for each song text is calculated. Afterwards, these are fed into the NMF algorithm, which returns two matrices that...
+	
+	We found that a number of ten topics is appropriate for our dataset. When choosing more topics, they start to overlap too much. When choosing fewer topics, too much information is put into every single topic. This is of course subject to the experimentalist's taste.
 	
 		\subsection{Results}
+		%Picture is not fully contained in pdf exported from Gephi
+		%Need to do it again when I'm in the mood for it
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 70mm 0mm 50mm, clip, width=\linewidth]{data/topic_graph}
+			\caption{Full topic graph}
+			\label{fig:topicgraph}
+		\end{figure}
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 70mm 0mm 50mm, width=0.7\linewidth]{data/topic_graph_weight3-10}
+			\caption{Topic graph with edge weights higher than $0.3$}
+			\label{fig:reducedtopicgraph}
+		\end{figure}
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 50mm 0mm 50mm, clip, width=0.7\linewidth]{data/topic_graph_new_modularity}
+			\caption{Reduced topic graph with recalculated modularity}
+			\label{fig:topicnewmod}
+		\end{figure}
+		
+		Figure \ref{fig:topicsimilarity} shows the similarity of topics between artists. It is interesting to see that a lot of the rappers form their own subgraph, that is completely isolated from the rest of the graph.
+		
+		\begin{figure}[htb]
+			\centering
+			\includegraphics[trim=0mm 50mm 0mm 50mm, clip, width=\linewidth]{data/topic_similarity}
+				\caption{Topic similarity between artists}
+				\label{fig:topicsimilarity}
+		\end{figure}
 	
 	\section{Other techniques}
 	RAKE
 	Summarization
 	Text statistics (Flesch Score, etc.)
-	
-	\section{Visualization}
-	Used Gephi to visualize the results as a graph
-	The \textit{pygraphml} package was used to dump the extracted information to a GraphML file, that can be imported by Gephi.
-	Calculate modularity classes in Gephi
 
 	\section{Conclusion}
 	

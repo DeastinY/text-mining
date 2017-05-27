@@ -91,3 +91,7 @@ ENV/
 .ropeproject
 .vscode/launch.json
 *.aux
+report/Report.toc
+report/Report.blg
+*.bbl
+report/Report.synctex.gz
