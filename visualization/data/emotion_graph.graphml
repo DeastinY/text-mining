@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <graphml>
     <key attr.name="label" attr.type="string" id="label"/>
-    <key attr.name="weight" attr.type="string" id="weight"/>
+    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
     <graph edgedefault="directed" id="">
         <node id="Kendrick Lamar"/>
         <node id="Gorillaz"/>
