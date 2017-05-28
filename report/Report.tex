@@ -20,15 +20,12 @@
 	
 	\section{Introduction}
 	\label{sec:introduction}
-	Measure the similarity of artists with respect to emotions and topics
-	We give information about our dataset and how it was gathered
-	Next, we describe the preprocessing that has been done on the data
-	In the following two sections, we discuss the emotion mining and the topic extraction
-	Afterwards, we show how the results have been visualized
-	We explain the tools we used
-	All of the processing is done in Python 3.6
+	Leaving melody aside, there is a lot of information that can be extracted from a song's lyrics. In this work, we aim to measure the similarity of artists with respect to emotions and topics of their songs based on their lyrics.
+	
+	In Section \ref{sec:dataset}, we give an overview over our dataset and explain how it was gathered. Section \ref{sec:preprocessing} describes the preprocessing that has been done. We mention the tools we used for the visualization in Section \ref{sec:visualization}, followed by the actual emotion mining in Section \ref{sec:emotionmining} and the topic extraction in Section \ref{sec:topicextraction} and the visualization of their results. All of the processing is done in Python 3.6.
 
 	\section{Dataset}
+	\label{sec:dataset}
 	%100 top Billboard artists
 	%20 metal bands from got-djent.com
 	The \textit{pylyrics3} package is able to download the lyrics for all songs of a given artist if it exists on \textit{lyrics.wikia.com}. The lyrics are returned in a dictionary, where the keys are the song names and the values are the songs' lyrics. The usage of this package is straightforward and removes the necessity to deal with the raw HTML data. The retrieved songs are stored in JSON format, each song having a title, the artist's name and the actual lyrics.
@@ -40,6 +37,7 @@
 	Some of the lyrics are not very clean. For example, they contain markers for the chorus and the verse part...
 
 	\section{Preprocessing}	
+	\label{sec:preprocessing}
 	For tokenization and stemming, the \textit{nltk} Python package has been used. It provides easy to use function for splitting a document into sentences and splitting the sentences in words. Furthermore it implements several stemming algorithms. In our implementations, we use the Porter algorithm. We downloaded a list of stopwords that are more appropriate for lyrics. Moreover, in the process of topic extraction, we iteratively added words to this stopword list whenever we found...
 	
 	The tf-idf features are built with the help of the \textit{sklearn} package. It offers the \textit{TfIdfVectorizer} class, which...
@@ -49,21 +47,24 @@
 	In our dataset, all songs, except for one, are in English. For the ??? dataset, we implemented a rudimentary language detection using the \textit{langdetect} Python package \cite{langdetect}. This package is a port of Google's language detection library.
 	
 	\section{Visualization}
-	Used Gephi to visualize the results as a graph
-	The \textit{pygraphml} package was used to dump the extracted information to a GraphML file, that can be imported by Gephi.
-	Calculate modularity classes in Gephi
+	\label{sec:visualization}
+	To visualize our results, we use the open-source platform \textit{Gephi}, which is able to display a plethora of graphs and networks that can also be explored interactively. Gephi provides a rich set of features. Some of the features we make use of include filtering out edges with low weight, calculating modularity classes for the nodes in a graph, ...
+	
+	% A bit blabla about the problems we came across, since I think we might fall short to reach the page limit
+	To be able to import our results to Gephi, we made use of the \textit{pygraphml} Python package. It provides a couple of methods to dump the extracted information into a \textit{GraphML} file, that can be imported by Gephi. However, the pygraphml package is very rudimentary. An issue was that the weight attribute that has been added to edges is stored as a string, rather than a number, which makes it impossible for Gephi to recognize the edge weight properly. We circumvented this problem by simply exchanging a single line in the beginning of the GraphML file.
 	
 	\section{Emotion Mining}
+	\label{sec:emotionmining}
 	The emotion mining is done by first tokenizing every song's text. Afterwards, every token is looked up in an emotion lexicon for its emotional value. For our experiments, we used the \textit{NRC Emotion Lexicon} (EmoLex) by... This lexicon specifies the emotional value for the eight emotions \textit{anger}, \textit{anticipation}, \textit{disgust}, \textit{fear}, \textit{joy}, \textit{sadness}, \textit{surprise}, and \textit{trust}.
 	
-	The emotion mining we apply to the lyrics is only rudimentary. It does not handle negations...
+	The emotion mining we apply to the lyrics is only rudimentary, as it does not handle negations. We were not able to find an emotion lexicon that specifies the opposite emotional value for every common emotion word.
 	
-	We define the \textit{strength} of an emotion by...
+	After we acquired the eight dimensional emotion vector for every song, the vectors for all songs of an artist have been summed up and normalized. The resulting vectors contain information about how strong each of the eight emotions is for a certain artist. Furthermore, when calculating the distance from one artist's emotion vector to the emotion vector of every other artist, we are able to see the emotional similarity between the artists. For our experiments, we used the cosine distance as it...
 	
 		\subsection{Results}
 		Figure \ref{fig:emotiongraph} shows a graph of all 120 artists, where each artist is connected to every emotion. The edges themselves have weights depending on the strength of the emotion in an artist's song. The weights are normalized between 0 and 1.
 		
-		The full graph is of course quite confusing and does not yield any useful insight. Therefore, Figure \ref{fig:reducedemotiongraph} shows a graph that contains only those edges with weights higher than $0.3$.
+		The full graph is of course quite confusing and does not yield any useful insight. Therefore, Figure \ref{fig:reducedemotiongraph} shows a graph that contains only those edges with weights higher than $0.3$. % TODO: Explain why 0.3
 		
 		\begin{figure}[htb]
 			\centering
@@ -96,6 +97,7 @@
 		\end{figure}
 	
 	\section{Topic Extraction}
+	\label{sec:topicextraction}
 	The Non-negative Matrix Factorization (NMF) algorithm has been used to extract potential topics from the lyrics. The \textit{sklearn} Python package provides everything necessary to apply NMF to the data. First, a tf-idf feature vector for each song text is calculated. Afterwards, these are fed into the NMF algorithm, which returns two matrices that...
 	
 	We found that a number of ten topics is appropriate for our dataset. When choosing more topics, they start to overlap too much. When choosing fewer topics, too much information is put into every single topic. This is of course subject to the experimentalist's taste.
@@ -133,13 +135,21 @@
 				\caption{Topic similarity between artists}
 				\label{fig:topicsimilarity}
 		\end{figure}
+		
+		\subsection{Evaluation}
+		We tried to evaluate the resulting topics via held-out tests.
 	
 	\section{Other techniques}
+	\label{sec:othertechniques}
+	In this section we want to mention some of the techniques we used that were neglected as we settled for the approach we took in the end.
+	POS Tagging
+	Named Entity Extraction
 	RAKE
 	Summarization
 	Text statistics (Flesch Score, etc.)
 
 	\section{Conclusion}
+	\label{sec:conclusion}
 	
 	\newpage
 	
