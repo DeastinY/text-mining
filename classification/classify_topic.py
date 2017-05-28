@@ -35,7 +35,7 @@ def get_features(songs):
 	features = tfidf_vectorizer.fit_transform(lyrics)
 	print("tf-idf features built")
 
-	return features
+	return features.todense()
 
 def get_labels(songs):
 	return np.array([np.argmax(song["topics"]) for song in songs])
@@ -47,10 +47,11 @@ def split_dataset(features, labels, topic, test_size):
 	print("Number of positive samples: {}".format(positives.size))
 	negatives = np.where(labels != topic)[0]
 	print("Number of negative samples: {}".format(negatives.size))
-	labels[positives] = 1
-	labels[negatives] = -1
+	ret = labels.copy()
+	ret[positives] = 1
+	ret[negatives] = -1
 
-	return train_test_split(features, labels, test_size=test_size, random_state=0)
+	return train_test_split(features, ret, test_size=test_size, random_state=0)
 
 if __name__ == "__main__":
 	INFILE = "../output/bill_lyrics_annotated.json"

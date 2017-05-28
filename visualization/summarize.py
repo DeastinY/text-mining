@@ -52,10 +52,12 @@ def calculate_similarity(summary):
 
 	return similarity
 
-def generate_graph(similarity, attr, *, emotion_threshold=0.98, topic_threshold=0.85):
+def generate_graph(similarity, attr):
 	from pygraphml import Graph
 	items = similarity.items()
 	labels = np.array([artist for artist, obj in items])
+
+	network = np.zeros((labels.size, labels.size))
 
 	g = Graph()
 
@@ -63,18 +65,23 @@ def generate_graph(similarity, attr, *, emotion_threshold=0.98, topic_threshold=
 		g.add_node(artist)
 
 	for artist_id, x in enumerate(items):
+		network[artist_id, artist_id] = 1
 		artist, obj = x
 
 		if attr == "emotion":
 			for idx, score in enumerate(obj["emotion_sim"]):
-				if emotion_threshold <= score < 1:
+				if network[artist_id, idx] == 0 and network[idx, artist_id] == 0:
 					edge = g.add_edge_by_label(labels[artist_id], labels[idx])
 					edge["weight"] = score
+					network[artist_id, idx] = 1
+					network[idx, artist_id] = 1
 		elif attr == "topic":
 			for idx, score in enumerate(obj["topic_sim"]):
-				if topic_threshold <= score < 1:
+				if network[artist_id, idx] == 0 and network[idx, artist_id] == 0:
 					edge = g.add_edge_by_label(labels[artist_id], labels[idx])
 					edge["weight"] = score
+					network[artist_id, idx] = 1
+					network[idx, artist_id] = 1
 
 	return g
 
