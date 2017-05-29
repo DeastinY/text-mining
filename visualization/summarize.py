@@ -72,14 +72,20 @@ def generate_graph(similarity, attr):
 			for idx, score in enumerate(obj["emotion_sim"]):
 				if network[artist_id, idx] == 0 and network[idx, artist_id] == 0:
 					edge = g.add_edge_by_label(labels[artist_id], labels[idx])
-					edge["weight"] = score
+					if score == 0:
+						edge["weight"] = 0.001
+					else:
+						edge["weight"] = score
 					network[artist_id, idx] = 1
 					network[idx, artist_id] = 1
 		elif attr == "topic":
 			for idx, score in enumerate(obj["topic_sim"]):
 				if network[artist_id, idx] == 0 and network[idx, artist_id] == 0:
 					edge = g.add_edge_by_label(labels[artist_id], labels[idx])
-					edge["weight"] = score
+					if score == 0:
+						edge["weight"] = 0.001
+					else:	
+						edge["weight"] = score
 					network[artist_id, idx] = 1
 					network[idx, artist_id] = 1
 

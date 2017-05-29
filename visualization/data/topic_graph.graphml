@@ -10774,7 +10774,7 @@
             <data key="weight">0.0263106831882</data>
         </edge>
         <edge directed="false" source="Kodak Black" target="uneven structure">
-            <data key="weight">0.0</data>
+            <data key="weight">0.001</data>
         </edge>
         <edge directed="false" source="Kodak Black" target="vildhjarta">
             <data key="weight">0.000227683612281</data>
@@ -10801,7 +10801,7 @@
             <data key="weight">0.00456265256852</data>
         </edge>
         <edge directed="false" source="Kodak Black" target="haunted shores">
-            <data key="weight">0.0</data>
+            <data key="weight">0.001</data>
         </edge>
         <edge directed="false" source="Kodak Black" target="destiny potato">
             <data key="weight">0.0439619504819</data>
@@ -10810,7 +10810,7 @@
             <data key="weight">0.213766318261</data>
         </edge>
         <edge directed="false" source="Kodak Black" target="elitist">
-            <data key="weight">0.0</data>
+            <data key="weight">0.001</data>
         </edge>
         <edge directed="false" source="Kodak Black" target="david maxim micic">
             <data key="weight">0.0244359730233</data>
