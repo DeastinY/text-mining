@@ -96,7 +96,14 @@
 	
 	To be able to import our results to Gephi, we made use of the \textit{pygraphml} Python package. It provides a couple of methods to dump the extracted information into a \textit{GraphML} file, that can be imported by Gephi. However, the pygraphml package is very rudimentary. An issue was that the weight attribute that has been added to edges is stored as a string, rather than a number, which makes it impossible for Gephi to recognize the edge weight properly. We circumvented this problem by simply exchanging a single line in the beginning of the GraphML file.
 	
-	The second framework that was used is \textit{word\_cloud} \cite{wordcloud}. It provides a Python interface to generate wordclouds from text. It was used in conjunction with \textit{flask} \cite{flask} to spin up a local webserver that can be used to browse emotion and vocabulary wordclouds for the different artists. Wordclouds are created before through the main scripts and are just displayed in HTML, as creating them in real time added significant delay when exploring artists interactively.
+	The second framework that was used is \textit{word\_cloud} \cite{wordcloud}. It provides a Python interface to generate wordclouds from text. It was used in conjunction with \textit{flask} \cite{flask} to spin up a local webserver that can be used to browse emotion and vocabulary wordclouds for the different artists. Wordclouds are created before through the main scripts and are just displayed in HTML, as creating them in real time added significant delay when exploring artists interactively. An example of the wordclouds generated can be seen in Figure \ref{fig:wordcloud}.
+	
+	\begin{figure}[htb]
+		\centering
+		\includegraphics[width=\linewidth]{data/wordcloud}
+		\caption{Wordcloud visualizing the most important terms in the lyrics of Bruno Mars. The size of the terms is related to their frequency in the lyrics. The color is only used for a more appealing visualization and does not convey any meaning.}
+		\label{fig:wordcloud}
+	\end{figure}
 	
 	To summarize pygraphml was used to export data to Gephi where visualizations involving the complete dataset were created. In addition wordclouds have been generated for the emotions and vocabularies of all individual artists. Those can be explored through the filebrowser ore more conveniently a local webserver created in flask.
 	
