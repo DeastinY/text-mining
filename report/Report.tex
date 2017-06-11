@@ -26,7 +26,6 @@
 
 	\section{Dataset}
 	\label{sec:dataset}
-	%In this section an overview over the datasets used and the acquisition thereof will be given. Furthermore some comment about lyrics quality will be given.
 
 	The \textit{pylyrics3} package \cite{pylyrics3} is able to download the lyrics for all songs of a given artist if they have an entry on \textit{lyrics.wikia.com}. This website, online since April 2006, contains more than 1.5 million songs based on crowd-sourcing. It is integrated into many different media players including Windows Media Player, iTunes, Winamp and Amarok \cite{lyricwikia}.
 	
@@ -38,28 +37,9 @@
 	%In addition to the dataset we gathered ourselves, we were given a database of more than 16.000 artists and 228.000 originally built by Sibirtsev and Schuster \cite{sibirtsevschuster}. In the remainder of this document, we refer to it as the external dataset.
 	
 	Some of the lyrics are not very clean. For example, they contain markers for the chorus and verse part or additional information like \textit{INTRUMENTAL} or \textit{SOLO}. In some lyrics contact information of the creator is included and the formatting often varies between different authors. We did not filter out these tokens, as they did not seem to have an impact on our results.
-	
-	\begin{comment}
-	Eminem - 5 Stars General:
-	\begin{quote}
-		(feat. Shabaam Shadeeg, Skam, Kwest \& A.L.) \newline
-		[Intro:]  \newline
-		[man 1:] I like this song...  \newline
-		[man 2:] All right! All right! All right everybody set off down!  \newline
-		[man 1:] Oh, please!  \newline
-		[man 2:] Come on now, now! KHM!  \newline
-		[Chorus: Sample]  \newline
-		Rhymes it all! [scratches]  \newline
-		And every rhymes what I've heard it all before.  \newline
-		[Shabaam Shadeeq:]  \newline
-		Of course - I rap till I'm hoarse, add the sauce  \newline
-		...  
-	\end{quote}
-	\end{comment}
 
 	\section{Preprocessing}	
 	\label{sec:preprocessing}
-	%This section goes into detail on the preprocessing that the lyrics went through. The different aspects and the toolkits are described. Furthermore motivation for the different methods are given.
 	
 	All of the programming is done in Python 3.6 using different modules to interface existing NLP toolkits. Preprocessing the lyrics consists of several parts. The lyrics are tokenized, stemmed and stopwords are removed. Furthermore a TF-IDF feature matrix is calculated and the language of songs is detected. Most of the preprocessing steps are independent and can be executed in parallel. 
 	
@@ -77,7 +57,6 @@
 	
 	\section{Visualization}
 	\label{sec:visualization}
-	%In this section the tools used to visualize our results will be described and problems encountered using them will be discussed. Two different frameworks have been used for the visualizations which will be discussed in sequential order.
 	
 	All the graph visualizations were created using the open-source platform \textit{Gephi} \cite{ICWSM09154}. Gephi is able to display a plethora of graphs and networks that can also be explored interactively. It provides a rich set of features, including filtering out edges with low weight, calculating modularity classes for the nodes in a graph, and coloring the nodes according to their modularity class. 
 	
@@ -92,11 +71,8 @@
 		\label{fig:wordcloud}
 	\end{figure}
 	
-	%To summarize, \textit{pygraphml} was used to export data to Gephi where visualizations involving the complete dataset were created. In addition wordclouds have been generated for the emotions and vocabularies of all individual artists. Those can be explored through the filebrowser ore more conveniently a local webserver created in flask.
-	
 	\section{Emotion Mining}
 	\label{sec:emotionmining}
-	%An overview over the exact emotion mining workflow is given in this chapter. Furthermore first results are shown and discussed.
 	
 	The emotion mining is based on the preprocessed data. Every token of the tokenized lyrics is looked up in an emotion lexicon for its emotional value. For our experiments, we used the \textit{NRC Emotion Lexicon} (EmoLex) \cite{emolex}. This lexicon specifies emotional values for the eight emotions \textit{anger}, \textit{anticipation}, \textit{disgust}, \textit{fear}, \textit{joy}, \textit{sadness}, \textit{surprise}, and \textit{trust}.
 	
@@ -177,15 +153,15 @@
 		\end{figure}
 		
 		\subsection{Evaluation}
-		We tried to evaluate the resulting topics via held-out tests. For this, we assigned a label from $0$ to $9$ to each song depending on the highest component in its ten-dimensional topic vector. We splitted the songs for each topic into a training and a test set and trained an SVM with the songs' TF-IDF features.
+		We tried to evaluate the resulting topics via held-out tests. For this, we assigned a label from $0$ to $9$ to each song depending on the highest component in its ten-dimensional topic vector. We split the songs for each topic into a training and a test set and trained an SVM with the songs' TF-IDF features.
 		
-		Unfortunately, the best of the ten SVMs only achieved an accuracy of approximately 42\%. This could have several reasons, the most likely being that the assignment of a song to a topic depending on the maximal value in its topic vector is too crude. For example, the topic vector of Kendrick Lamar's song \textit{Growing Apart} has a value of approximately $0.0208$ in the first and $0.0206$ in the second topic. With our approach, where each song is assigned exactly one label, this song would get the label $0$, which is a very insensitive classification.
+		Unfortunately, the best of the ten SVMs only achieved an accuracy of approximately 42\%. This could have several reasons, the most likely being that the assignment of a song to a topic depending on the maximal value in its topic vector is too crude. For example, the topic vector of \textit{Kendrick Lamar}'s song \textit{Growing Apart} has a value of approximately $0.0208$ in the first and $0.0206$ in the second topic. With our approach, where each song is assigned exactly one label, this song would get the label $0$, which is a very insensitive classification.
 		
-		This could cause the feature space to not be linearly separable anymore. Since we only experimented with linear SVMs, these cannot achieve high accuracies.
+		This could cause the feature space to not be linearly separable anymore. Since we only experimented with linear SVMs, these cannot achieve high accuracies in this particular domain.
 	
 	\section{Other techniques}
 	\label{sec:othertechniques}
-	In this section we want to mention some of the techniques we used that were neglected during the development, some of which were already mentioned earlier. %and some have not yet been discussed at all. While we did decide not to include these techniques in our project, no generality should be inferred from this, as we rejected some techniques based on lack of experience, time complexity or simply the quality of the API and documentation.
+	In this section we want to mention some of the techniques we used that were neglected during the development, some of which were already mentioned earlier.
 	
 	Part-of-Speech Tagging as well as Named Entity Extraction are techniques often used in the NLP domain. The \textit{nltk} toolkit offers endpoints for both and can use different engines like the components created by the \textit{Stanford NLP Group} or can even be trained on a custom text corpus. We implemented both techniques to extract additional information from the lyrics, but none of our high-level goals (emotion mining and topic extraction) benefited from the invested effort. 
 	
