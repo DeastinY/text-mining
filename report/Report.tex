@@ -32,12 +32,12 @@
 	
 	The lyrics are returned in a dictionary, where the keys are song names and the values are the lyrics. The usage of this package is straightforward and removes the necessity to deal with raw HTML data. The retrieved songs are stored in JSON format, each song having a title, the artist's name and the actual lyrics.
 	
-	Some of the top 100 Billboard artists could not be resolved when querying \textit{pylyrics3}. This could be due to spelling variations or incomplete/currently maintained entries. Moreover, we scraped the names of 30 metal bands from \textit{got-djent.com} and requested their lyrics via \textit{pylyrics3}. Some of them could also not be resolved, either due to spelling variations or because they are not popular enough to be listed. Altogether, we ended up with approximately 11.000 songs from 120 artists.
+	Some of the top 100 Billboard artists could not be resolved when querying \textit{pylyrics3}. This could be due to spelling variations or incomplete/currently maintained entries. Moreover, we scraped the names of 30 metal bands from \textit{got-djent.com} and requested their lyrics via \textit{pylyrics3}. Some of them could also not be resolved, either due to spelling variations or because they are not popular enough to be listed. Altogether, we ended up with approximately 11,000 songs from 120 artists.
 
 	%We do not mention this dataset anywhere else, so we should not mention it here
 	%In addition to the dataset we gathered ourselves, we were given a database of more than 16.000 artists and 228.000 originally built by Sibirtsev and Schuster \cite{sibirtsevschuster}. In the remainder of this document, we refer to it as the external dataset.
 	
-	Some of the lyrics are not very clean. For example, they contain markers for the chorus and verse part or additional information like \textit{INTRUMENTAL} or \textit{SOLO}. In some lyrics contact information of the creator is included and the formatting often varies between different authors. We did not put any effort into filtering out these tokens, as they did not seem to have a great impact on our results.
+	Some of the lyrics are not very clean. For example, they contain markers for the chorus and verse part or additional information like \textit{INTRUMENTAL} or \textit{SOLO}. In some lyrics contact information of the creator is included and the formatting often varies between different authors. We did not filter out these tokens, as they did not seem to have an impact on our results.
 	
 	\begin{comment}
 	Eminem - 5 Stars General:
@@ -201,8 +201,9 @@
 
 	\section{Conclusion}
 	\label{sec:conclusion}
-	%To be revised, maybe add more stuff
-	The results are intuitive, natural and reasonable. Rap and Metal convey different emotions than Pop and Mainstream. Moreover, they also deal with different topics. Also, Rap and Metal seem to be closer to each other than they are to the Mainstream music. However, this whole analysis is only based on the songs' lyrics. It would be very interesting to also incorporate the melody, but this is not in the scope of this project.
+	To sum up the achieved results fit the intuition and are rather reasonable. The genres of Rap and Metal convey different emotions than Pop and Mainstream. Moreover, the detected topics clearly separate those genres. Rap and Metal also seem to be closer to each other than they are to the Mainstream music. However, this whole analysis is only based on the songs' lyrics. For future work the incorporation of melody or other aspects of music into the analysis would certainly lead to interesting results. Furthermore the correlation between genre /topics /  emotions and an artist's net-worth would be interesting to explore.
+	
+	The code as well as the dataset is publicly available on GitHub \cite{code} and can be used for further projects under the GPL license.
 	
 	\newpage
 	
