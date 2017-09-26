@@ -1,1 +1,1 @@
-A proper README will be added soon.
+https://github.com/DeastinY/text-mining/raw/master/report/Report.pdf
